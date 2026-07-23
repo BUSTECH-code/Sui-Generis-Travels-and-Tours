@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Abroad Consultancy | SUI-GENERIS TRAVELS AND TOURS LTD</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+   <!-- Top Info Bar 
+  <div class="top-bar">
+    <div class="container top-bar-wrapper">
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-location-dot"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja</span>
+        <span><i class="fa-solid fa-envelope"></i> info@suigeneristravel.com</span>
+      </div>
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-phone"></i> 08171421897 | 07060907368</span>
+      </div>
+    </div>
+  </div>
+-->
+
+  <!-- Header Navigation -->
+ <!-- Unified Header (Use on ALL inner pages) -->
+<header class="navbar navbar-v2">
+  <div class="container nav-container">
+    <a href="index.html" class="brand-logo">
+      <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
+    </a>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+      <a href="study-abroad.html" class="nav-link">Study Abroad <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+      <a href="flights.html" class="nav-link">Flights</a>
+      <a href="services.html" class="nav-link">Tours</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+  <!-- Hero Banner -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Study Abroad Placement & Guidance</h1>
+      <p>Secure global admissions, scholarships, and student visa approvals seamlessly.</p>
+    </div>
+  </section>
+
+  <!-- Overview Stats Banner -->
+  <section class="stats-banner">
+    <div class="container grid-4 text-center">
+      <div class="stat-item">
+        <h2>45+</h2>
+        <p>Destinations (USA, UK, Canada, Australia, Europe, Asia)</p>
+      </div>
+      <div class="stat-item">
+        <h2>1,200+</h2>
+        <p>Partner Institutions & Colleges</p>
+      </div>
+      <div class="stat-item">
+        <h2>100,000+</h2>
+        <p>Course Options</p>
+      </div>
+      <div class="stat-item">
+        <h2>From €3,000</h2>
+        <p>Affordable Tuition Options</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist & Application Form -->
+  <section class="section-padding">
+    <div class="container grid-2 gap-large align-start">
+      
+      <!-- Entry Checklist -->
+      <div>
+        <h2 class="section-title">Entry Requirements Checklist</h2>
+        <ul class="checklist-items">
+          <li><i class="fa-solid fa-circle-check icon-success"></i> Valid International Passport</li>
+          <li><i class="fa-solid fa-circle-check icon-success"></i> Academic Certificates (WAEC/NECO/Degree)</li>
+          <li><i class="fa-solid fa-circle-check icon-success"></i> Official Academic Transcripts</li>
+          <li><i class="fa-solid fa-circle-check icon-success"></i> Curriculum Vitae (CV)</li>
+          <li><i class="fa-solid fa-circle-check icon-success"></i> Personal Statement / SOP</li>
+          <li><i class="fa-solid fa-circle-check icon-success"></i> English Proficiency Test Results (Where applicable)</li>
+          <li><i class="fa-solid fa-circle-check icon-success"></i> Financial Proof / Proof of Funds</li>
+          <li><i class="fa-solid fa-circle-check icon-success"></i> Passport Photograph</li>
+        </ul>
+
+        <div class="card info-box">
+          <h4>Intake Periods</h4>
+          <p>January, June, and September Intakes available.</p>
+          <h4 class="mt-1">Scholarships Available</h4>
+          <p>Special funding packages for European, Brazilian, and Chinese universities.</p>
+        </div>
+      </div>
+
+      <!-- Application Form -->
+      <div class="card form-card">
+        <h3 class="form-title">Apply for Study Consultation</h3>
+        <form data-supabase-form="study_applications">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="fullname" class="form-control" required placeholder="Jane Doe">
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" class="form-control" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" class="form-control" required placeholder="08012345678">
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label>Preferred Country</label>
+              <select name="country" class="form-control" required>
+                <option value="UK">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+                <option value="Australia">Australia</option>
+                <option value="Europe">Europe</option>
+                <option value="China">China</option>
+                <option value="Brazil">Brazil</option>
+                <option value="UAE">UAE</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Desired Qualification</label>
+              <select name="qualification" class="form-control">
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Postgraduate">Postgraduate / Master's</option>
+                <option value="PhD">PhD / Doctorate</option>
+                <option value="Diploma">Diploma / Foundation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Intended Course of Study</label>
+            <input type="text" name="course" class="form-control" placeholder="e.g. Computer Science, Public Health">
+          </div>
+
+          <button type="submit" class="btn-book-now btn-full mt-1">
+            Submit Study Application
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>SUI-GENERIS TRAVELS</h3>
+          <p>SUIGENERIS TRAVELS AND TOURS LTD is a trusted travel agency delivering world-class air ticketing, study abroad placements, visa advisory, and corporate travel solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="study-abroad.html">Study Abroad</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <p class="footer-text">Subscribe for flight deals and study abroad scholarship updates.</p>
+          <form data-supabase-form="newsletter" class="newsletter-form">
+            <input type="email" name="email" placeholder="Your Email" required class="form-control">
+            <button type="submit" class="btn-book-now"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SUIGENERIS TRAVELS AND TOURS LTD. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Widget -->
+  <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* css/variables.css */
+:root {
+  /* ==========================================
+     EXACT BRAND COLOR PALETTE
+     ========================================== */
+  --accent-orange:   #F58220; /* Logo, "Book Now" buttons, Promotions, Special offers, Icons, Hover effects, Active links */
+  --bg-main:         #FFFFFF; /* White: Dominates most pages & main background */
+  --dark-navy:       #1E2A38; /* Dark Navy/Charcoal: Navigation bar text, Headings, Footer, Important text */
+  --light-gray:      #F5F5F5; /* Light Gray: Cards, Search boxes, Forms, Section background contrast */
+  --success-green:   #28A745; /* Green: Used SPARINGLY for successful payments, booking confirmations, positive statuses */
+  --error-red:       #DC3545; /* Red: Errors ONLY */
+
+  /* Functional Layout Tokens */
+  --text-dark:       #1E2A38;
+  --text-muted:      #556575;
+  --border-color:    #E2E8F0;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transition: all 0.25s ease-in-out;
+}

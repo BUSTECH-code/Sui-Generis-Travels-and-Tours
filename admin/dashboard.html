@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Operations Center | SUI-GENERIS</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <img src="../assets/logos/sui generis logo 1.jpg" alt="SUI-GENERIS logo">
+        <div>
+          <span>SUIGENERIS</span>
+          <p>Admin Operations</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="Admin navigation">
+        <button type="button" class="nav-item active" data-table="home"><i class="fa-solid fa-house"></i>Dashboard Home</button>
+        <button type="button" class="nav-item" data-table="bookings"><i class="fa-solid fa-plane"></i>Flight Bookings</button>
+        <button type="button" class="nav-item" data-table="visa_applications"><i class="fa-solid fa-passport"></i>Visa Requests</button>
+        <button type="button" class="nav-item" data-table="study_applications"><i class="fa-solid fa-graduation-cap"></i>Study Abroad</button>
+        <button type="button" class="nav-item" data-table="appointments"><i class="fa-solid fa-calendar-days"></i>Appointments</button>
+        <button type="button" class="nav-item" data-table="contacts"><i class="fa-solid fa-envelope"></i>Inquiries</button>
+        <button type="button" class="nav-item" data-table="blogs"><i class="fa-solid fa-newspaper"></i>Blog Manager</button>
+        <button type="button" class="nav-item" data-table="gallery"><i class="fa-solid fa-image"></i>Gallery Manager</button>
+        <button type="button" class="nav-item" data-table="testimonials"><i class="fa-solid fa-comment-dots"></i>Testimonials</button>
+        <button type="button" class="nav-item" data-table="special_offers"><i class="fa-solid fa-tag"></i>Special Offers</button>
+        <button type="button" class="nav-item" data-table="newsletter"><i class="fa-solid fa-envelope-open-text"></i>Newsletter</button>
+      </nav>
+      <button id="logout-btn" class="nav-item nav-signout" type="button"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</button>
+    </aside>
+
+    <main class="main-content">
+      <div class="top-header">
+        <div>
+          <h1 id="page-title">Dashboard Home</h1>
+          <p id="page-description">Overview of your travel operations, live status, and quick actions.</p>
+        </div>
+      </div>
+
+      <div class="grid-4 stats-grid" aria-label="Dashboard statistics">
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-plane"></i></span>
+            <div>
+              <p class="stat-card-title">Flight Bookings</p>
+              <span class="stat-card-status positive">Live</span>
+            </div>
+          </div>
+          <h2 id="stat-bookings">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-passport"></i></span>
+            <div>
+              <p class="stat-card-title">Visa Requests</p>
+              <span class="stat-card-status alert">In review</span>
+            </div>
+          </div>
+          <h2 id="stat-visas">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <div>
+              <p class="stat-card-title">Study Abroad</p>
+              <span class="stat-card-status positive">Growing</span>
+            </div>
+          </div>
+          <h2 id="stat-study">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-calendar-days"></i></span>
+            <div>
+              <p class="stat-card-title">Appointments</p>
+              <span class="stat-card-status positive">Today</span>
+            </div>
+          </div>
+          <h2 id="stat-appointments">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <p class="stat-card-title">Inquiries</p>
+              <span class="stat-card-status alert">Unresolved</span>
+            </div>
+          </div>
+          <h2 id="stat-contacts">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-newspaper"></i></span>
+            <div>
+              <p class="stat-card-title">Blog Posts</p>
+              <span class="stat-card-status positive">Fresh</span>
+            </div>
+          </div>
+          <h2 id="stat-blogs">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-image"></i></span>
+            <div>
+              <p class="stat-card-title">Gallery Items</p>
+              <span class="stat-card-status positive">Updated</span>
+            </div>
+          </div>
+          <h2 id="stat-gallery">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-comment-dots"></i></span>
+            <div>
+              <p class="stat-card-title">Testimonials</p>
+              <span class="stat-card-status positive">Trusted</span>
+            </div>
+          </div>
+          <h2 id="stat-testimonials">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-tag"></i></span>
+            <div>
+              <p class="stat-card-title">Special Offers</p>
+              <span class="stat-card-status positive">Active</span>
+            </div>
+          </div>
+          <h2 id="stat-offers">0</h2>
+        </section>
+        <section class="card stat-card">
+          <div class="stat-card-heading">
+            <span class="stat-card-icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+            <div>
+              <p class="stat-card-title">Newsletter Subscribers</p>
+              <span class="stat-card-status positive">Trending</span>
+            </div>
+          </div>
+          <h2 id="stat-newsletter">0</h2>
+        </section>
+      </div>
+
+      <section id="home-section" class="home-section">
+        <div class="home-panels">
+          <article class="card home-card">
+            <div class="panel-heading">
+              <div>
+                <h3>Recent Activity</h3>
+                <p class="panel-note">Changes, submissions and email events tracked live.</p>
+              </div>
+              <span class="badge status-info">Live</span>
+            </div>
+            <ul id="recent-activity" class="activity-list">
+              <li class="activity-item empty">No recent activity yet.</li>
+            </ul>
+          </article>
+          <article class="card home-card">
+            <div class="panel-heading">
+              <div>
+                <h3>Quick Actions</h3>
+                <p class="panel-note">Jump directly into the most-used workflows.</p>
+              </div>
+              <span class="badge status-success">Fast</span>
+            </div>
+            <div class="quick-actions">
+              <button type="button" class="btn-main quick-action" data-action="bookings">Add Booking</button>
+              <button type="button" class="btn-main quick-action" data-action="appointments">Add Appointment</button>
+              <button type="button" class="btn-main quick-action" data-action="visa_applications">Add Visa Request</button>
+              <button type="button" class="btn-main quick-action" data-action="study_applications">Add Study Application</button>
+              <button type="button" class="btn-main quick-action" data-action="blogs">New Blog Post</button>
+              <button type="button" class="btn-main quick-action" data-action="gallery">Upload Gallery Image</button>
+              <button type="button" class="btn-main quick-action" data-action="testimonials">Add Testimonial</button>
+              <button type="button" class="btn-main quick-action" data-action="special_offers">Add Special Offer</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-toolbar" aria-label="Table controls">
+        <div class="toolbar-left">
+          <label class="screen-reader-text" for="search-input">Search records</label>
+          <input id="search-input" class="form-control" type="search" placeholder="Search name, email, phone, or status">
+        </div>
+        <div class="toolbar-center">
+          <label class="screen-reader-text" for="sort-field">Sort records</label>
+          <select id="sort-field" class="form-control" aria-label="Sort records">
+            <option value="">Sort by</option>
+          </select>
+          <button id="sort-toggle" type="button" class="btn-secondary" title="Toggle sort direction"><i class="fa-solid fa-arrow-up-wide-short"></i></button>
+          <label class="screen-reader-text" for="status-filter">Filter by status</label>
+          <select id="status-filter" class="form-control" aria-label="Filter records by status">
+            <option value="">All Status</option>
+          </select>
+        </div>
+        <div class="toolbar-action">
+          <button id="export-csv" class="btn-main" type="button"><i class="fa-solid fa-file-csv"></i>Export CSV</button>
+          <button id="print-view" class="btn-main" type="button"><i class="fa-solid fa-print"></i>Print</button>
+          <button id="module-action-button" class="btn-main hidden" type="button"><i class="fa-solid fa-plus"></i>Action</button>
+        </div>
+      </section>
+
+      <section id="table-section" class="table-section hidden" aria-label="Module records">
+        <div class="table-wrapper">
+          <table id="data-table">
+            <thead>
+              <tr id="table-head"></tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+        <div class="pagination hidden" id="pagination-bar" aria-label="Table pagination">
+          <button id="previous-page" type="button" class="btn-secondary">Previous</button>
+          <span id="page-indicator" class="page-indicator">Page 1</span>
+          <button id="next-page" type="button" class="btn-secondary">Next</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <div id="record-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Record details</h2>
+        <button id="modal-close" class="modal-close" aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer" id="modal-footer"></div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

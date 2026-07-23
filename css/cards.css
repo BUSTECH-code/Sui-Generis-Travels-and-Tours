@@ -1,0 +1,118 @@
+/* ==========================================================================
+   UNIFORM CARD & GRID ENGINE (Fixes Stray Images & Alignment Issues)
+   ========================================================================== */
+
+/* Equal Height Grid System */
+.grid-2, .grid-3, .grid-4 {
+  display: grid;
+  gap: 1.75rem;
+  align-items: stretch; /* Forces equal height across rows */
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Card Container */
+.card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--border-color, #E2E8F0);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Spans full height of grid row */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Strict Uniform Image Wrapper */
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Fixed height for all card images */
+  background-color: #F1F5F9;
+  overflow: hidden;
+  flex-shrink: 0; /* Prevents image shrink on long text */
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops image cleanly without distortion */
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Card Body Layout */
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Pushes button/footer to the bottom */
+}
+
+.card-title {
+  color: var(--primary-navy, #122466);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card-text {
+  color: var(--text-muted, #64748B);
+  font-size: 0.925rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Fills empty space so buttons stay aligned at bottom */
+}
+
+.card-footer {
+  margin-top: auto; /* Guarantees sticky placement at bottom of card */
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, #F1F5F9);
+}
+
+/* Service Card Special Variant */
+.service-card {
+  position: relative;
+  text-align: left;
+}
+
+.service-card .icon-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  background: var(--primary-navy, #122466);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 992px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .card-img-wrapper { height: 180px; }
+}

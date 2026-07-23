@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUI-GENERIS TRAVELS AND TOURS LTD | Official Website</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+   <!-- Top Info Bar 
+  <div class="top-bar">
+    <div class="container top-bar-wrapper">
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-location-dot"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja</span>
+        <span><i class="fa-solid fa-envelope"></i> info@suigeneristravel.com</span>
+      </div>
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-phone"></i> 08171421897 | 07060907368</span>
+      </div>
+    </div>
+  </div>
+-->
+
+  <!-- Top Header Navigation -->
+<header class="navbar navbar-v2">
+  <div class="container nav-container">
+    <a href="index.html" class="brand-logo">
+      <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
+    </a>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+      <a href="study-abroad.html" class="nav-link">Study Abroad <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+      <a href="flights.html" class="nav-link">Flights</a>
+      <a href="services.html" class="nav-link">Tours</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+  <!-- Hero Section v2 -->
+  <section class="hero-v2">
+    <!-- Background Overlay -->
+    <div class="hero-bg-overlay"></div>
+    
+    <div class="container hero-container">
+      <div class="hero-content-v2">
+        <span class="hero-script-tag">Explore The World With Us</span>
+        <h1 class="hero-headline">Your Journey, <br>Our <span class="highlight-orange">Priority</span></h1>
+        <p class="hero-subtext">SUIGENERIS TRAVELS AND TOURS LTD is your trusted partner for all your travel, study abroad, visa and tour needs.</p>
+        
+        <div class="hero-cta-group">
+          <a href="flights.html" class="btn-orange-filled">Book Now <i class="fa-solid fa-paper-plane"></i></a>
+          <a href="services.html" class="btn-outline-glass">Explore Services</a>
+        </div>
+      </div>
+
+      <!-- Floating Counter Badge -->
+      <div class="floating-badge-v2">
+        <div class="badge-icon"><i class="fa-solid fa-plane"></i></div>
+        <div class="badge-text">
+          <h3>45+</h3>
+          <p>Countries<br><span>To Explore</span></p>
+        </div>
+      </div>
+
+      <!-- Slider Arrows -->
+      <button class="slider-arrow arrow-left" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-arrow arrow-right" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Floating Search Drawer -->
+    <div class="container drawer-wrapper-v2">
+      <div class="search-drawer-v2">
+        
+        <!-- Drawer Tabs -->
+        <div class="drawer-tabs">
+          <button class="drawer-tab active"><i class="fa-solid fa-plane"></i> Flight Search</button>
+          <a href="services.html" class="drawer-tab"><i class="fa-solid fa-hotel"></i> Hotel Search</a>
+          <a href="services.html" class="drawer-tab"><i class="fa-solid fa-earth-americas"></i> Tour Packages</a>
+          <a href="visa.html" class="drawer-tab"><i class="fa-solid fa-passport"></i> Visa Services</a>
+        </div>
+
+        <!-- Flight Form Box -->
+        <form data-supabase-form="bookings" class="drawer-form-card">
+          <div class="drawer-inputs-row">
+            
+            <div class="drawer-field">
+              <label>From</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" name="departure" placeholder="City or Airport" required>
+              </div>
+            </div>
+
+            <!-- Swap Button -->
+            <button type="button" class="btn-swap-cities" aria-label="Swap Locations">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+
+            <div class="drawer-field">
+              <label>To</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" name="destination" placeholder="City or Airport" required>
+              </div>
+            </div>
+
+            <div class="drawer-field">
+              <label>Depart</label>
+              <div class="input-with-icon">
+                <input type="text" id="depart-date" name="departure_date" placeholder="Select Date" required>
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
+            </div>
+
+            <div class="drawer-field">
+              <label>Return</label>
+              <div class="input-with-icon">
+                <input type="text" id="return-date" name="return_date" placeholder="Select Date">
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
+            </div>
+
+            <div class="drawer-field">
+              <label>Travelers</label>
+              <div class="input-with-icon">
+                <select name="adults">
+                  <option value="1">1 Traveler</option>
+                  <option value="2">2 Travelers</option>
+                  <option value="3">3+ Travelers</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="drawer-field btn-field">
+              <input type="hidden" name="phone" value="08171421897">
+              <button type="submit" class="btn-drawer-search">
+                <i class="fa-solid fa-magnifying-glass"></i> Search Flight
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators Bar -->
+  <section class="trust-bar-section">
+    <div class="container">
+      <div class="trust-bar-v2">
+        
+        <div class="trust-item">
+          <div class="trust-icon icon-green"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h4>Best Price Guarantee</h4>
+            <p>We offer the best prices worldwide</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon icon-orange"><i class="fa-solid fa-headset"></i></div>
+          <div>
+            <h4>24/7 Customer Support</h4>
+            <p>We are here to help you anytime</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon icon-teal"><i class="fa-solid fa-suitcase"></i></div>
+          <div>
+            <h4>Easy Booking</h4>
+            <p>Book your trip in few minutes</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon icon-gold"><i class="fa-solid fa-award"></i></div>
+          <div>
+            <h4>Trusted Agency</h4>
+            <p>10+ years of travel excellence</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon icon-blue"><i class="fa-solid fa-globe"></i></div>
+          <div>
+            <h4>Global Network</h4>
+            <p>45+ countries and 1200+ institutions</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section v2 -->
+  <section class="section-padding bg-surface">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-header-tag">OUR SERVICES</span>
+        <h2 class="main-header-title">Services We Offer</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="grid-6-v2">
+        
+        <a href="flights.html" class="service-box-v2">
+          <div class="service-icon-wrapper bg-soft-blue">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h3>Air Ticket Booking</h3>
+          <p>Domestic & International</p>
+        </a>
+
+        <a href="study-abroad.html" class="service-box-v2">
+          <div class="service-icon-wrapper bg-soft-orange">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>Study Abroad</h3>
+          <p>Over 45 Countries</p>
+        </a>
+
+        <a href="visa.html" class="service-box-v2">
+          <div class="service-icon-wrapper bg-soft-teal">
+            <i class="fa-solid fa-passport"></i>
+          </div>
+          <h3>Visa Processing</h3>
+          <p>Fast & Reliable</p>
+        </a>
+
+        <a href="services.html" class="service-box-v2">
+          <div class="service-icon-wrapper bg-soft-purple">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <h3>Hotel Reservations</h3>
+          <p>Comfortable Stays</p>
+        </a>
+
+        <a href="services.html" class="service-box-v2">
+          <div class="service-icon-wrapper bg-soft-green">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <h3>Holiday Packages</h3>
+          <p>Enjoy Great Holidays</p>
+        </a>
+
+        <a href="services.html" class="service-box-v2">
+          <div class="service-icon-wrapper bg-soft-dark">
+            <i class="fa-solid fa-kaaba"></i>
+          </div>
+          <h3>Umrah / Hajj</h3>
+          <p>Spiritual Journeys</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SUIGENERIS TRAVELS AND TOURS LTD. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Vendor Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    flatpickr("#depart-date", { minDate: "today" });
+    flatpickr("#return-date", { minDate: "today" });
+  </script>
+</body>
+</html>
