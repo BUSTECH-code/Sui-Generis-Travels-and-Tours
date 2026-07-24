@@ -1,38 +1,153 @@
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+﻿console.log("App.js loaded");
 
-console.log("App.js loaded");
-// 1. Initialize Supabase
-const SUPABASE_URL = 'https://brudufqolikgmecykdnj.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJydWR1ZnFvbGlrZ21lY3lrZG5qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ3NjAxMzcsImV4cCI6MjEwMDMzNjEzN30.8ZvnWRRcScCnm5CuVDnkHc0u_i_CW_w5U4hQWm5hPXw';
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxhH0GrzhR_z2ZCak8iCuTTqCm6T9abQZNStfz5fdLbe37mRDV1d6DcWYMs23eLhYyM/exec";
+const SHEET_MAP = {
+  bookings: "Bookings",
+  visa_applications: "Visa Applications",
+  study_applications: "Study Applications",
+  appointments: "Appointments",
+  contacts: "Contacts"
+};
+const FEEDBACK_DURATION_MS = 4200;
 
-// 2. Dynamic Form Submission Handler
-document.addEventListener('DOMContentLoaded', () => {
-  const forms = document.querySelectorAll('[data-supabase-form]');
+function ensureFeedbackContainer() {
+  let container = document.getElementById("public-form-feedback");
 
-  forms.forEach(form => {
-  form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  if (!container) {
+    container = document.createElement("div");
+    container.id = "public-form-feedback";
+    container.setAttribute("aria-live", "polite");
+    container.setAttribute("aria-atomic", "true");
+    document.body.appendChild(container);
+  }
 
-  console.log("Submit clicked");
+  return container;
+}
 
-  const tableName = form.getAttribute("data-supabase-form");
-  console.log("Table:", tableName);
+function dismissFeedback(toast) {
+  if (!toast || !toast.isConnected) return;
 
+  toast.classList.remove("show");
+  toast.classList.add("hide");
+
+  window.setTimeout(() => {
+    toast.remove();
+  }, 220);
+}
+
+function showFeedback(type, title, message) {
+  const container = ensureFeedbackContainer();
+  const toast = document.createElement("div");
+  toast.className = `public-form-feedback ${type}`;
+  toast.innerHTML = `
+    <div class="feedback-icon" aria-hidden="true">
+      ${type === "success" ? "✓" : "!"}
+    </div>
+    <div class="feedback-content">
+      <strong>${title}</strong>
+      <p>${message}</p>
+    </div>
+    <button class="feedback-close" type="button" aria-label="Dismiss notification">×</button>
+  `;
+
+  const closeButton = toast.querySelector(".feedback-close");
+  closeButton.addEventListener("click", () => dismissFeedback(toast));
+
+  container.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.classList.add("show");
+  });
+
+  window.setTimeout(() => dismissFeedback(toast), FEEDBACK_DURATION_MS);
+}
+
+function setSubmitButtonState(button, isSubmitting) {
+  if (!button) return;
+
+  const originalText = button.dataset.originalText || button.textContent.trim();
+  button.dataset.originalText = originalText;
+  button.disabled = isSubmitting;
+  button.classList.toggle("is-submitting", isSubmitting);
+
+  if (isSubmitting) {
+    button.innerHTML = `
+      <span class="submit-spinner" aria-hidden="true"></span>
+      <span>Submitting...</span>
+    `;
+  } else {
+    button.textContent = originalText;
+  }
+}
+
+function buildPayload(form) {
   const formData = new FormData(form);
   const payload = Object.fromEntries(formData.entries());
+  const tableName = form.dataset.supabaseForm;
 
-  console.log(payload);
+  payload.formType = SHEET_MAP[tableName] || tableName;
+  return payload;
+}
 
-  console.log("Cabin Class =", formData.cabin_class);
-  const { data, error } = await supabase
-    .from(tableName)
-    .insert([payload])
-    .select();
+async function submitPublicForm(form) {
+  const submitButton = form.querySelector("button[type='submit']");
 
-  console.log("Data:", data);
-  console.dir(error);
-console.log(JSON.stringify(error, null, 2));
-});
+  if (!submitButton) {
+    return;
+  }
+
+  if (form.dataset.isSubmitting === "true") {
+    return;
+  }
+
+  form.dataset.isSubmitting = "true";
+  setSubmitButtonState(submitButton, true);
+
+  try {
+    const payload = buildPayload(form);
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      body: new URLSearchParams(payload)
+    });
+
+    const responseText = await response.text();
+    let parsedResult = null;
+
+    try {
+      parsedResult = responseText ? JSON.parse(responseText) : {};
+    } catch (error) {
+      parsedResult = { raw: responseText };
+    }
+
+    const isSuccess = response.ok && parsedResult?.success !== false && parsedResult?.status !== "error" && !/error/i.test(responseText) && !/failed/i.test(responseText);
+
+    if (isSuccess) {
+      showFeedback(
+        "success",
+        "Request received",
+        "Your request has been submitted successfully. Our team will contact you shortly."
+      );
+      form.reset();
+    } else {
+      const errorMessage = parsedResult?.error || "We couldn't submit your request. Please try again.";
+      showFeedback("error", "Submission issue", errorMessage);
+    }
+  } catch (error) {
+    console.error("Google Form submission failed:", error);
+    showFeedback("error", "Submission issue", "We couldn't submit your request. Please try again.");
+  } finally {
+    form.dataset.isSubmitting = "false";
+    setSubmitButtonState(submitButton, false);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const forms = document.querySelectorAll("form[data-supabase-form]");
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      await submitPublicForm(form);
+    });
   });
 });
