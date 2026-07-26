@@ -55,65 +55,43 @@
   </section>
 
   <!-- Form Section -->
-  <section class="section-padding bg-surface">
-    <div class="container container-narrow">
-      <div class="card form-card">
-        <h2 class="form-title">Visa Application Portal</h2>
-        
-        <form data-supabase-form="visa_applications">
-          <div class="form-group">
-            <label>Full Applicant Name</label>
-            <input type="text" name="fullname" class="form-control" required placeholder="John Doe">
-          </div>
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-intro">
+        <nav class="booking-form-breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="visa.html">Visa</a>
+        </nav>
 
-          <div class="grid-2">
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" class="form-control" required placeholder="john@example.com">
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" class="form-control" required placeholder="08012345678">
-            </div>
-          </div>
+        <div class="contact-hero-copy">
+          <h2 class="section-title">Complete Your Visa Request</h2>
+          <p>Fill out the secure visa inquiry form below. A member of our advisory team will contact you shortly.</p>
+        </div>
 
-          <div class="grid-2">
-            <div class="form-group">
-              <label>Target Country</label>
-              <input type="text" name="destination_country" class="form-control" required placeholder="e.g. UK, Canada, USA, UAE">
+        <div class="booking-form-cta">
+          <span class="booking-form-pill">Tourist, work, student &amp; corporate visa support</span>
+          <a href="tel:+2348171421897" class="btn-book-now">Call the team</a>
+        </div>
+
+        <div class="booking-form-shell">
+          <div class="card booking-form-card">
+            <div class="booking-form-header">
+              <h3>Visa Application Request Form</h3>
+              <p>Share your destination, visa type, travel dates, and supporting details for a tailored consultation.</p>
             </div>
-            <div class="form-group">
-              <label>Visa Category</label>
-              <select name="visa_category" class="form-control" required>
-                <option value="Tourist Visa">Tourist / Visit Visa</option>
-                <option value="Student Visa">Student Visa</option>
-                <option value="Work Visa">Work Visa</option>
-                <option value="Umrah/Hajj">Umrah / Hajj Package</option>
-                <option value="Immigration">Immigration Services</option>
-              </select>
+            <div class="booking-form-iframe-wrapper">
+              <iframe
+                class="booking-form-iframe"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc3ZkWa82rMoAllH12QQ-Ywx0E6Nbmyv6nsHPNVsC1OzkrmCA/viewform?embedded=true"
+                title="SUI-GENERIS Visa Application Request Form"
+                loading="lazy"
+                allowfullscreen>
+                Loading…
+              </iframe>
             </div>
           </div>
-
-          <div class="grid-2">
-            <div class="form-group">
-              <label>Passport Number</label>
-              <input type="text" name="passport_number" class="form-control" required placeholder="A12345678">
-            </div>
-            <div class="form-group">
-              <label>Intended Travel Date</label>
-              <input type="text" id="visa-date" name="travel_date" class="form-control" required placeholder="YYYY-MM-DD">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Additional Information</label>
-            <textarea name="notes" class="form-control" rows="3" placeholder="Previous visa refusals, travel history, or specific questions..."></textarea>
-          </div>
-
-          <button type="submit" class="btn-book-now btn-full mt-1">
-            Submit Visa Assistance Request
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   </section>

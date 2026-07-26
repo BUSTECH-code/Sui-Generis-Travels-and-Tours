@@ -56,79 +56,41 @@
   <!-- Main Section -->
   <section class="section-padding">
     <div class="container">
-      <div class="grid-2 gap-large">
-        
-        <!-- Contact Information -->
-        <div class="contact-info-wrapper">
-          <h2 class="section-title">Get In Touch</h2>
-          
-          <div class="card contact-card">
-            <div class="icon-box icon-navy">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div>
-              <h4 class="card-title">Head Office Location</h4>
-              <p class="card-subtitle">Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja, Nigeria</p>
-            </div>
-          </div>
+      <div class="contact-intro">
+        <nav class="booking-form-breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="contact.html">Contact</a>
+        </nav>
 
-          <div class="card contact-card">
-            <div class="icon-box icon-green">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div>
-              <h4 class="card-title">Email Address</h4>
-              <p class="card-subtitle">info@suigeneristravel.com</p>
-            </div>
-          </div>
+        <div class="contact-hero-copy">
+          <h2 class="section-title">Complete Your Booking Request</h2>
+          <p>Fill out the secure booking form below. A member of our travel team will contact you shortly.</p>
+        </div>
 
-          <div class="card contact-card">
-            <div class="icon-box icon-orange">
-              <i class="fa-solid fa-phone"></i>
+        <div class="booking-form-cta">
+          <span class="booking-form-pill">Prefer a phone consultation?</span>
+          <a href="tel:+2348171421897" class="btn-book-now">Call the team</a>
+        </div>
+
+        <div class="booking-form-shell">
+          <div class="card booking-form-card">
+            <div class="booking-form-header">
+              <h3>Booking Request Form</h3>
+              <p>Share your travel plans, preferred dates, and destination so we can tailor the perfect itinerary.</p>
             </div>
-            <div>
-              <h4 class="card-title">Phone & WhatsApp</h4>
-              <p class="card-subtitle">08171421897 | 07060907368</p>
+            <div class="booking-form-iframe-wrapper">
+              <iframe
+                class="booking-form-iframe"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc3qIU8QRV5di3Dis1yDmfkod6ofqfJVXpqnCRhyYJuAo0Ltg/viewform?embedded=true"
+                title="SUI-GENERIS Travel Booking Request Form"
+                loading="lazy"
+                allowfullscreen>
+                Loading…
+              </iframe>
             </div>
           </div>
         </div>
-
-        <!-- Contact Form -->
-        <div class="card form-card">
-          <h3 class="form-title">Send Us a Message</h3>
-          <form data-supabase-form="contacts">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" name="fullname" class="form-control" placeholder="Full Name" required>
-            </div>
-
-            <div class="grid-2">
-              <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" class="form-control" placeholder="Email" required>
-              </div>
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Subject / Service</label>
-              <input type="text" name="subject" class="form-control" placeholder="Inquiry about Study Abroad or Visa" required>
-            </div>
-
-            <div class="form-group">
-              <label>Message</label>
-              <textarea name="message" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
-            </div>
-
-            <button type="submit" class="btn-book-now btn-full">
-              Send Message
-            </button>
-          </form>
-        </div>
-
       </div>
     </div>
   </section>

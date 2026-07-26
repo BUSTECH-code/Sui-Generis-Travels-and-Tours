@@ -78,86 +78,66 @@
 
   <!-- Checklist & Application Form -->
   <section class="section-padding">
-    <div class="container grid-2 gap-large align-start">
-      
-      <!-- Entry Checklist -->
-      <div>
-        <h2 class="section-title">Entry Requirements Checklist</h2>
-        <ul class="checklist-items">
-          <li><i class="fa-solid fa-circle-check icon-success"></i> Valid International Passport</li>
-          <li><i class="fa-solid fa-circle-check icon-success"></i> Academic Certificates (WAEC/NECO/Degree)</li>
-          <li><i class="fa-solid fa-circle-check icon-success"></i> Official Academic Transcripts</li>
-          <li><i class="fa-solid fa-circle-check icon-success"></i> Curriculum Vitae (CV)</li>
-          <li><i class="fa-solid fa-circle-check icon-success"></i> Personal Statement / SOP</li>
-          <li><i class="fa-solid fa-circle-check icon-success"></i> English Proficiency Test Results (Where applicable)</li>
-          <li><i class="fa-solid fa-circle-check icon-success"></i> Financial Proof / Proof of Funds</li>
-          <li><i class="fa-solid fa-circle-check icon-success"></i> Passport Photograph</li>
-        </ul>
+    <div class="container">
+      <div class="contact-intro">
+        <nav class="booking-form-breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="study-abroad.html">Study Abroad</a>
+        </nav>
 
-        <div class="card info-box">
-          <h4>Intake Periods</h4>
-          <p>January, June, and September Intakes available.</p>
-          <h4 class="mt-1">Scholarships Available</h4>
-          <p>Special funding packages for European, Brazilian, and Chinese universities.</p>
+        <div class="contact-hero-copy">
+          <h2 class="section-title">Complete Your Study Abroad Application</h2>
+          <p>Fill out the secure application form below. A member of our study-abroad team will contact you shortly.</p>
+        </div>
+
+        <div class="booking-form-cta">
+          <span class="booking-form-pill">Admissions guidance, scholarships & visa support</span>
+          <a href="tel:+2348171421897" class="btn-book-now">Call the team</a>
+        </div>
+
+        <div class="booking-form-shell">
+          <div class="card booking-form-card">
+            <div class="booking-form-header">
+              <h3>Study Abroad Application Form</h3>
+              <p>Share your destination, preferred program, and academic background so we can guide your next steps.</p>
+            </div>
+            <div class="booking-form-iframe-wrapper">
+              <iframe
+                class="booking-form-iframe"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfUPvki5gGnIVGJIiUB-AU8e_rRq_qP6L60irZBe17iOQVbTA/viewform?embedded=true"
+                title="SUI-GENERIS Study Abroad Application Form"
+                loading="lazy"
+                allowfullscreen>
+                Loading…
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Application Form -->
-      <div class="card form-card">
-        <h3 class="form-title">Apply for Study Consultation</h3>
-        <form data-supabase-form="study_applications">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" name="fullname" class="form-control" required placeholder="Jane Doe">
-          </div>
+      <div class="grid-2 gap-large align-start mt-1">
+        <div>
+          <h2 class="section-title">Entry Requirements Checklist</h2>
+          <ul class="checklist-items">
+            <li><i class="fa-solid fa-circle-check icon-success"></i> Valid International Passport</li>
+            <li><i class="fa-solid fa-circle-check icon-success"></i> Academic Certificates (WAEC/NECO/Degree)</li>
+            <li><i class="fa-solid fa-circle-check icon-success"></i> Official Academic Transcripts</li>
+            <li><i class="fa-solid fa-circle-check icon-success"></i> Curriculum Vitae (CV)</li>
+            <li><i class="fa-solid fa-circle-check icon-success"></i> Personal Statement / SOP</li>
+            <li><i class="fa-solid fa-circle-check icon-success"></i> English Proficiency Test Results (Where applicable)</li>
+            <li><i class="fa-solid fa-circle-check icon-success"></i> Financial Proof / Proof of Funds</li>
+            <li><i class="fa-solid fa-circle-check icon-success"></i> Passport Photograph</li>
+          </ul>
 
-          <div class="grid-2">
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" class="form-control" required placeholder="jane@example.com">
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" class="form-control" required placeholder="08012345678">
-            </div>
+          <div class="card info-box">
+            <h4>Intake Periods</h4>
+            <p>January, June, and September Intakes available.</p>
+            <h4 class="mt-1">Scholarships Available</h4>
+            <p>Special funding packages for European, Brazilian, and Chinese universities.</p>
           </div>
-
-          <div class="grid-2">
-            <div class="form-group">
-              <label>Preferred Country</label>
-              <select name="country" class="form-control" required>
-                <option value="UK">United Kingdom</option>
-                <option value="Canada">Canada</option>
-                <option value="USA">USA</option>
-                <option value="Australia">Australia</option>
-                <option value="Europe">Europe</option>
-                <option value="China">China</option>
-                <option value="Brazil">Brazil</option>
-                <option value="UAE">UAE</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Desired Qualification</label>
-              <select name="qualification" class="form-control">
-                <option value="Undergraduate">Undergraduate</option>
-                <option value="Postgraduate">Postgraduate / Master's</option>
-                <option value="PhD">PhD / Doctorate</option>
-                <option value="Diploma">Diploma / Foundation</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Intended Course of Study</label>
-            <input type="text" name="course" class="form-control" placeholder="e.g. Computer Science, Public Health">
-          </div>
-
-          <button type="submit" class="btn-book-now btn-full mt-1">
-            Submit Study Application
-          </button>
-        </form>
+        </div>
       </div>
-
     </div>
   </section>
 

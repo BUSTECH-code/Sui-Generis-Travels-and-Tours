@@ -145,6 +145,164 @@ img {
 .grid-6-v2 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
 .gap-large { gap: 3rem; }
 
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.booking-form-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.booking-form-breadcrumbs a {
+  color: var(--primary-navy);
+  transition: var(--transition);
+}
+
+.booking-form-breadcrumbs a:hover {
+  color: var(--accent-orange);
+}
+
+.contact-hero-copy {
+  max-width: 760px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 0.7rem;
+}
+
+.contact-hero-copy p {
+  color: var(--text-muted);
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.booking-form-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.booking-form-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.95rem;
+  background: rgba(0, 168, 89, 0.1);
+  color: var(--brand-green);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.booking-form-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.1rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(255, 255, 255, 0.98));
+  border: 1px solid rgba(30, 42, 56, 0.08);
+  box-shadow: var(--shadow-md);
+}
+
+.booking-form-card {
+  border: 0;
+  border-radius: 18px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.booking-form-header {
+  padding: 1.75rem 1.75rem 1rem;
+  background: linear-gradient(90deg, rgba(30, 42, 56, 0.03), rgba(255, 107, 0, 0.03));
+}
+
+.booking-form-header h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 0.45rem;
+}
+
+.booking-form-header p {
+  color: var(--text-muted);
+  font-size: 0.97rem;
+}
+
+.booking-form-iframe-wrapper {
+  padding: 0.75rem 1.25rem 1.25rem;
+}
+
+.booking-form-iframe {
+  display: block;
+  width: 100%;
+  min-height: 980px;
+  height: clamp(980px, 78vh, 1280px);
+  border: 0;
+  border-radius: 16px;
+  background: var(--bg-white);
+}
+
+@media (max-width: 768px) {
+  .booking-form-shell {
+    max-width: 100%;
+    padding: 0.8rem;
+    border-radius: 20px;
+  }
+
+  .booking-form-header {
+    padding: 1.35rem 1.1rem 0.85rem;
+  }
+
+  .booking-form-iframe-wrapper {
+    padding: 0.4rem 0.8rem 0.95rem;
+  }
+
+  .booking-form-iframe {
+    min-height: 1120px;
+    height: clamp(1120px, 92vh, 1460px);
+  }
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .booking-form-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .booking-form-shell {
+    padding: 0.65rem;
+  }
+
+  .booking-form-header {
+    padding: 1.15rem 0.95rem 0.7rem;
+  }
+
+  .booking-form-iframe-wrapper {
+    padding: 0.25rem 0.6rem 0.8rem;
+  }
+
+  .booking-form-iframe {
+    min-height: 1260px;
+    height: clamp(1260px, 96vh, 1580px);
+  }
+}
+
 /* ==========================================================================
    4. NAVIGATION & TOP BAR
    ========================================================================== */
@@ -1038,6 +1196,21 @@ img {
 }
 
 .form-card { padding: 2rem; }
+
+.flight-cta-card {
+  padding: 2rem;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  border: 1px solid rgba(30, 42, 56, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.flight-cta-copy {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
 
 .form-title {
   font-size: 1.35rem;

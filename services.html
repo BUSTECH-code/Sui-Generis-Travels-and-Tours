@@ -131,12 +131,12 @@
   <script type="module" src="js/app.js"></script>
   <script type="module">
     const serviceList = [
-      { title: "Air Ticket Booking", icon: "fa-plane", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80", desc: "Domestic and international airline tickets across all major global carriers at competitive rates." },
-      { title: "Study Abroad Consultancy", icon: "fa-graduation-cap", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80", desc: "University placements in 45+ countries including UK, Canada, USA, Europe, China, and Brazil." },
-      { title: "Visa Processing Advisory", icon: "fa-passport", img: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80", desc: "Expert guidance for student, tourist, business, and immigration visas." },
-      { title: "Hotel Reservations", icon: "fa-hotel", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80", desc: "Discounted rates for luxury, business, and budget hotel stays worldwide." },
-      { title: "Custom Holiday Packages", icon: "fa-umbrella-beach", img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", desc: "Handcrafted vacation itineraries for individuals, couples, and corporate groups." },
-      { title: "Umrah & Hajj Services", icon: "fa-kaaba", img: "https://images.unsplash.com/photo-1565552070098-fd83a8dac718?auto=format&fit=crop&w=600&q=80", desc: "Seamless holy pilgrimage travel arrangements with accommodation and guidance." }
+      { title: "Air Ticket Booking", icon: "fa-plane", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80", desc: "Domestic and international airline tickets across all major global carriers at competitive rates.", link: "flights.html" },
+      { title: "Study Abroad Consultancy", icon: "fa-graduation-cap", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80", desc: "University placements in 45+ countries including UK, Canada, USA, Europe, China, and Brazil.", link: "study-abroad.html" },
+      { title: "Visa Processing Advisory", icon: "fa-passport", img: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80", desc: "Expert guidance for student, tourist, business, and immigration visas.", link: "visa.html" },
+      { title: "Hotel Reservations", icon: "fa-hotel", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80", desc: "Discounted rates for luxury, business, and budget hotel stays worldwide.", link: "contact.html" },
+      { title: "Custom Holiday Packages", icon: "fa-umbrella-beach", img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", desc: "Handcrafted vacation itineraries for individuals, couples, and corporate groups.", link: "contact.html" },
+      { title: "Umrah & Hajj Services", icon: "fa-kaaba", img: "https://images.unsplash.com/photo-1565552070098-fd83a8dac718?auto=format&fit=crop&w=600&q=80", desc: "Seamless holy pilgrimage travel arrangements with accommodation and guidance.", link: "contact.html" }
     ];
 
     const container = document.getElementById('aligned-services-grid');
@@ -149,7 +149,7 @@
         <div class="card-body">
           <h3 class="card-title">${s.title}</h3>
           <p class="card-text">${s.desc}</p>
-          <a href="contact.html?service=${encodeURIComponent(s.title)}" class="btn-outline">Inquire Service</a>
+          <a href="${s.link}" class="btn-outline">Inquire Service</a>
         </div>
       </div>
     `).join('');
