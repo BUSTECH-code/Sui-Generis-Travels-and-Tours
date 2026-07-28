@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Insights & Guides | SUI-GENERIS TRAVELS AND TOURS LTD</title>
-  
-  <!-- Fonts & Icons -->
+  <title>News & Blog | SUIGENERIS TRAVELS AND TOURS LTD</title>
+
+  <!-- External Resources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="bg-surface">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Header Navigation -->
-  <header class="navbar navbar-v2">
+  <!-- Style Hierarchy -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+  <!-- 1. Header & Navigation -->
+  <header class="navbar-v2">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
+        <img src="assets/logos/logo 2.png" alt="SUIGENERIS TRAVELS">
       </a>
-      
+
+      <!-- Hamburger Toggle Button (Mobile Only) -->
       <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -33,7 +35,6 @@
         <a href="services.html" class="nav-link">Services</a>
         <a href="study-abroad.html" class="nav-link">Study Abroad</a>
         <a href="flights.html" class="nav-link">Flights</a>
-        <a href="services.html" class="nav-link">Tours</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="blog.html" class="nav-link active">Blog</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
@@ -41,206 +42,421 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="page-hero-v2">
+  <!-- 1. PAGE HERO -->
+  <section class="page-hero">
     <div class="hero-bg-overlay"></div>
     <div class="container hero-inner-container">
-      <span class="hero-script-tag"><i class="fa-solid fa-compass"></i> Knowledge Hub</span>
-      <h1 class="page-title">Travel Insights & Guides</h1>
-      <p class="hero-subtitle">Expert visa assistance, study abroad guidance, airfare tips, and global trip inspiration.</p>
+      <h1 class="section-title">News & Blog</h1>
+      <p class="section-subtitle">Stay informed with the latest travel news, visa updates, scholarship opportunities, study abroad insights, travel tips, and company announcements.</p>
     </div>
   </section>
 
-  <!-- Main Content -->
+  <!-- 2. BREAKING / LATEST NEWS STRIP -->
+  <section class="breaking-news-strip">
+    <div class="container news-strip-inner">
+      <div class="breaking-label">
+        <i class="fa-solid fa-bolt"></i> Latest News
+      </div>
+      <div class="ticker-wrapper">
+        <div class="ticker-content">
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> UK announces new student visa requirements for 2026/2027 academic year</a>
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> Canada increases proof of funds threshold for international applicants</a>
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> SUIGENERIS TRAVELS officially opens new branch office in Abuja</a>
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> China bilateral scholarship applications now officially open</a>
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> Early bird summer flight discounts available for Europe & Americas</a>
+          <!-- Duplicate set for seamless continuous marquee loop -->
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> UK announces new student visa requirements for 2026/2027 academic year</a>
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> Canada increases proof of funds threshold for international applicants</a>
+          <a href="#" class="ticker-item"><i class="fa-solid fa-circle"></i> SUIGENERIS TRAVELS officially opens new branch office in Abuja</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. NEWS CATEGORIES BAR -->
+  <section class="news-categories-bar">
+    <div class="container">
+      <div class="categories-scroll">
+        <button class="cat-pill active" data-category="all"><i class="fa-solid fa-layer-group"></i> All Stories</button>
+        <button class="cat-pill" data-category="travel-news"><i class="fa-solid fa-newspaper"></i> Travel News</button>
+        <button class="cat-pill" data-category="visa-updates"><i class="fa-solid fa-passport"></i> Visa Updates</button>
+        <button class="cat-pill" data-category="scholarships"><i class="fa-solid fa-graduation-cap"></i> Scholarship Opportunities</button>
+        <button class="cat-pill" data-category="study-abroad"><i class="fa-solid fa-book-open"></i> Study Abroad</button>
+        <button class="cat-pill" data-category="travel-tips"><i class="fa-solid fa-lightbulb"></i> Travel Tips</button>
+        <button class="cat-pill" data-category="company-news"><i class="fa-solid fa-building-flag"></i> Company News</button>
+        <button class="cat-pill" data-category="industry-updates"><i class="fa-solid fa-chart-line"></i> Industry Updates</button>
+      </div>
+    </div>
+  </section>
+
   <main class="container section-padding">
 
-    <!-- Category Filter Bar -->
-    <div class="category-pills-wrapper">
-      <button class="category-pill active">All Articles</button>
-      <button class="category-pill">Visa Assistance</button>
-      <button class="category-pill">Study Abroad</button>
-      <button class="category-pill">Travel Tips</button>
-      <button class="category-pill">Flight Deals</button>
-    </div>
-
-    <!-- Featured Post -->
-    <article class="featured-post-card">
-      <div class="featured-img-wrapper">
-        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85" alt="Schengen Visa Guide 2026" loading="eager">
+    <!-- 3. FEATURED NEWS -->
+    <article class="featured-news-card">
+      <div class="featured-news-img">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80" alt="Visa Policy Briefing">
+        <span class="featured-badge"><i class="fa-solid fa-star"></i> Lead Story</span>
       </div>
-      <div class="featured-content">
-        <span class="blog-badge"><i class="fa-solid fa-star"></i> Featured Post</span>
-        <div class="blog-meta">
-          <span><i class="fa-regular fa-folder"></i> Visa Assistance</span>
-          <span><i class="fa-regular fa-calendar"></i> July 20, 2026</span>
-          <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+      <div class="featured-news-body">
+        <div class="news-meta-row">
+          <span class="category-tag visa"><i class="fa-solid fa-passport"></i> Visa Policy</span>
+          <span class="meta-item"><i class="fa-regular fa-calendar"></i> July 28, 2026</span>
+          <span class="meta-item"><i class="fa-regular fa-user"></i> Immigration Desk</span>
         </div>
-        <h2 class="featured-title">
-          <a href="#">Complete Guide to Securing a Schengen Visa in 2026: Requirements & Secrets</a>
+        <h2 class="featured-headline">
+          <a href="#">UK & Schengen Area Visa Policy Changes 2026: Official Compliance Guide for Applicants</a>
         </h2>
-        <p class="featured-excerpt">
-          Planning a trip to Europe? Navigating embassy documentation can feel overwhelming. Learn step-by-step how to prepare proof of funds, draft a winning itinerary cover letter, and pass your embassy interview effortlessly.
-        </p>
-        <div>
-          <a href="#" class="btn-orange-filled">
-            Read Full Article <i class="fa-solid fa-arrow-right"></i>
-          </a>
+        <p class="featured-excerpt">New financial threshold criteria, digitized biometric appointment requirements, and updated dependent policies are taking effect across major destinations. Here is what every traveler and student needs to prepare before submitting applications.</p>
+        <div class="featured-actions">
+          <a href="#" class="btn btn-primary">Read Full Advisory <i class="fa-solid fa-arrow-right"></i></a>
+          <span class="read-time"><i class="fa-regular fa-clock"></i> 7 min read</span>
         </div>
       </div>
     </article>
 
-    <!-- Blog Grid -->
-    <div class="blog-grid">
+    <!-- 7. TRAVEL ALERTS & VISA UPDATES SECTION -->
+    <section>
+      <div class="news-section-header">
+        <h2 class="news-section-title"><i class="fa-solid fa-triangle-exclamation"></i> Travel Alerts & Visa Updates</h2>
+        <a href="#" class="section-link">View All Alerts <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="alerts-grid">
+        <!-- Alert Card 1 -->
+        <article class="alert-card danger">
+          <div class="alert-status-header">
+            <span class="alert-pill">Critical Notice</span>
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> Updated Today</span>
+          </div>
+          <h3 class="alert-title">Canada Study Permit Proof of Funds Revised Upward</h3>
+          <p class="alert-excerpt">IRCC has updated living expense requirements for international students starting Autumn 2026. Applicants must now demonstrate higher liquid maintenance balances.</p>
+          <a href="#" class="blog-link">Check Updated Checklist <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-      <!-- Card 1 -->
-      <article class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85" alt="Study Abroad Scholarship" loading="lazy">
-          <span class="blog-card-category">Study Abroad</span>
-        </div>
-        <div class="blog-card-body">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> July 18, 2026</span>
-            <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+        <!-- Alert Card 2 -->
+        <article class="alert-card warning">
+          <div class="alert-status-header">
+            <span class="alert-pill">Procedural Shift</span>
+            <span class="meta-item"><i class="fa-regular fa-calendar"></i> July 25, 2026</span>
           </div>
-          <h3 class="blog-card-title"><a href="#">Top 10 Fully Funded Scholarships in Canada & UK for 2026</a></h3>
-          <p class="blog-card-description">Discover major academic funding opportunities covering tuition, living expenses, and airfare for international students.</p>
-          <div class="blog-card-footer">
-            <span class="author-tag">By EduTeam</span>
-            <a href="#" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </article>
+          <h3 class="alert-title">Schengen Digital Visa Application Portal Pilot</h3>
+          <p class="alert-excerpt">Selected EU embassies in Abuja and Lagos are transitioning to mandatory online pre-screening prior to in-person biometric enrollment.</p>
+          <a href="#" class="blog-link">Read Portal Guidance <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-      <!-- Card 2 -->
-      <article class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85" alt="Cheap Flights Hack" loading="lazy">
-          <span class="blog-card-category">Flight Deals</span>
-        </div>
-        <div class="blog-card-body">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> July 14, 2026</span>
-            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+        <!-- Alert Card 3 -->
+        <article class="alert-card info">
+          <div class="alert-status-header">
+            <span class="alert-pill">Flight Advisory</span>
+            <span class="meta-item"><i class="fa-regular fa-calendar"></i> July 20, 2026</span>
           </div>
-          <h3 class="blog-card-title"><a href="#">5 Insider Hacks to Score Cheaper International Airfares</a></h3>
-          <p class="blog-card-description">Stop overpaying for flights! Learn the best times to book, flexible date strategies, and how airline algorithms work.</p>
-          <div class="blog-card-footer">
-            <span class="author-tag">By FlightDesk</span>
-            <a href="#" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </article>
+          <h3 class="alert-title">Peak Season Air Transit & Luggage Clearances</h3>
+          <p class="alert-excerpt">Airlines announce updated baggage weight allocations and earlier check-in windows for international departures this season.</p>
+          <a href="#" class="blog-link">View Airline Guidance <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
 
-      <!-- Card 3 -->
-      <article class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85" alt="Tropical Destinations" loading="lazy">
-          <span class="blog-card-category">Destinations</span>
+    <!-- 6. COMPANY ANNOUNCEMENTS SECTION -->
+    <section class="company-announcements-wrapper">
+      <div class="news-section-header">
+        <h2 class="news-section-title"><i class="fa-solid fa-building-flag"></i> SUIGENERIS Corporate Announcements</h2>
+        <a href="#" class="section-link" style="color: var(--accent-orange);">Company Press <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="announcement-grid">
+        <!-- Card 1 -->
+        <div class="announcement-card">
+          <span class="announcement-badge"><i class="fa-solid fa-location-dot"></i> Branch Expansion</span>
+          <h3 class="announcement-title">SUIGENERIS Opens New Ultra-Modern Advisory Office in Abuja</h3>
+          <p class="announcement-desc">Our flagship branch in Suite D19, Melita Plaza, Area 11 Garki is now fully operational for walk-in study abroad and flight consultations.</p>
+          <span class="announcement-date"><i class="fa-regular fa-calendar"></i> July 26, 2026</span>
         </div>
-        <div class="blog-card-body">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> July 10, 2026</span>
-            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
-          </div>
-          <h3 class="blog-card-title"><a href="#">7 Hidden Gem Vacation Destinations to Visit This Year</a></h3>
-          <p class="blog-card-description">Escape the crowded tourist hotspots. Check out these breathtaking, budget-friendly destinations for your next trip.</p>
-          <div class="blog-card-footer">
-            <span class="author-tag">By TravelTeam</span>
-            <a href="#" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
+        <!-- Card 2 -->
+        <div class="announcement-card">
+          <span class="announcement-badge"><i class="fa-solid fa-handshake"></i> New Partnership</span>
+          <h3 class="announcement-title">Direct University Partnerships Signed Across Europe & UK</h3>
+          <p class="announcement-desc">We have partnered with 12 accredited institutions to offer expedited conditional offer letters and tuition discount vouchers for qualified students.</p>
+          <span class="announcement-date"><i class="fa-regular fa-calendar"></i> July 18, 2026</span>
         </div>
-      </article>
+        <!-- Card 3 -->
+        <div class="announcement-card">
+          <span class="announcement-badge"><i class="fa-solid fa-bullhorn"></i> Special Promo</span>
+          <h3 class="announcement-title">Summer Flight Reservation Drive & Visa Processing Rebates</h3>
+          <p class="announcement-desc">Enjoy discounted service fees on family vacation packages and early flight bookings booked throughout this month.</p>
+          <span class="announcement-date"><i class="fa-regular fa-calendar"></i> July 10, 2026</span>
+        </div>
+      </div>
+    </section>
 
-      <!-- Card 4 -->
-      <article class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=85" alt="Work Visa Rules" loading="lazy">
-          <span class="blog-card-category">Visa Assistance</span>
-        </div>
-        <div class="blog-card-body">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> June 28, 2026</span>
-            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+    <!-- 8. SCHOLARSHIP & STUDY ABROAD UPDATES -->
+    <section>
+      <div class="news-section-header">
+        <h2 class="news-section-title"><i class="fa-solid fa-graduation-cap"></i> Scholarship & Educational Opportunities</h2>
+        <a href="#" class="section-link">Explore All Scholarships <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="scholarship-grid">
+        <!-- Scholarship 1 -->
+        <article class="scholarship-card">
+          <div class="scholarship-header">
+            <span class="flag-badge"><i class="fa-solid fa-globe"></i> Europe / UK</span>
+            <span class="funding-tag">100% Full Tuition</span>
           </div>
-          <h3 class="blog-card-title"><a href="#">Navigating Post-Study Work Visas: What Graduates Should Know</a></h3>
-          <p class="blog-card-description">Everything you need to know about transitioning smoothly from a student visa to temporary work permits abroad.</p>
-          <div class="blog-card-footer">
-            <span class="author-tag">By VisaDesk</span>
-            <a href="#" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="scholarship-body">
+            <h3 class="scholarship-title">Global Masters Merit Grant 2026 Intake</h3>
+            <div class="scholarship-deadline">
+              <i class="fa-regular fa-hourglass-half"></i> Deadline: August 30, 2026
+            </div>
+            <p class="scholarship-desc">Covers full tuition, monthly stipend, and travel allowance for STEM and Humanities postgraduate degrees.</p>
+            <a href="#" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Apply via SUIGENERIS</a>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 5 -->
-      <article class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=85" alt="Travel Packing" loading="lazy">
-          <span class="blog-card-category">Travel Tips</span>
-        </div>
-        <div class="blog-card-body">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> June 22, 2026</span>
-            <span><i class="fa-regular fa-clock"></i> 3 min read</span>
+        <!-- Scholarship 2 -->
+        <article class="scholarship-card">
+          <div class="scholarship-header">
+            <span class="flag-badge"><i class="fa-solid fa-flag-usa"></i> North America</span>
+            <span class="funding-tag">Partial Grant ($15k)</span>
           </div>
-          <h3 class="blog-card-title"><a href="#">Essential Carry-On Checklist for Long-Haul International Flights</a></h3>
-          <p class="blog-card-description">Stay comfortable and prepared during long-haul flights with these essential packing items and organization tips.</p>
-          <div class="blog-card-footer">
-            <span class="author-tag">By TravelTeam</span>
-            <a href="#" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="scholarship-body">
+            <h3 class="scholarship-title">Canadian Undergraduate Entrance Excellence Award</h3>
+            <div class="scholarship-deadline">
+              <i class="fa-regular fa-hourglass-half"></i> Deadline: September 15, 2026
+            </div>
+            <p class="scholarship-desc">Automatic tuition reduction awards for high-achieving secondary school graduates seeking North American admission.</p>
+            <a href="#" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Check Eligibility</a>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 6 -->
-      <article class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85" alt="Corporate Travel" loading="lazy">
-          <span class="blog-card-category">Corporate</span>
-        </div>
-        <div class="blog-card-body">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> June 15, 2026</span>
-            <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+        <!-- Scholarship 3 -->
+        <article class="scholarship-card">
+          <div class="scholarship-header">
+            <span class="flag-badge"><i class="fa-solid fa-landmark"></i> Asia / China</span>
+            <span class="funding-tag">Government Funded</span>
           </div>
-          <h3 class="blog-card-title"><a href="#">How Businesses Save Money with Dedicated Travel Management</a></h3>
-          <p class="blog-card-description">Explore how outsourcing business travel logistics cuts expenses while offering 24/7 employee safety support.</p>
-          <div class="blog-card-footer">
-            <span class="author-tag">By CorpDesk</span>
-            <a href="#" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="scholarship-body">
+            <h3 class="scholarship-title">Bilateral Chinese Government University Program</h3>
+            <div class="scholarship-deadline">
+              <i class="fa-regular fa-hourglass-half"></i> Deadline: October 05, 2026
+            </div>
+            <p class="scholarship-desc">Full funding including accommodation and stipend for Bachelor's, Master's, and Doctorate degree applicants.</p>
+            <a href="#" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Start Application</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. LATEST ARTICLES FEED & 9. SIDEBAR LAYOUT -->
+    <div class="blog-layout">
+      
+      <!-- Articles Feed -->
+      <section>
+        <div class="news-section-header">
+          <h2 class="news-section-title"><i class="fa-solid fa-newspaper"></i> Latest Educational Articles & Tips</h2>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+
+          <!-- Article Card 1 -->
+          <article class="blog-card" data-category="travel-tips">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80" alt="Travel Luggage">
+            </div>
+            <div class="blog-card-body">
+              <span class="category-tag tips"><i class="fa-solid fa-lightbulb"></i> Travel Tips</span>
+              <h3 class="blog-card-title"><a href="#">Strategic Flight Booking: How to Lock Fares Early and Save 35%</a></h3>
+              <p class="blog-card-excerpt">Discover how multi-city connections, flexible date windows, and corporate partner reservations reduce flight expenses.</p>
+              <div class="blog-card-footer">
+                <span class="blog-author"><i class="fa-regular fa-user"></i> Flight Desk</span>
+                <a href="#" class="blog-link">Read <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 2 -->
+          <article class="blog-card" data-category="study-abroad">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80" alt="University Campus">
+            </div>
+            <div class="blog-card-body">
+              <span class="category-tag scholarship"><i class="fa-solid fa-book-open"></i> Study Abroad</span>
+              <h3 class="blog-card-title"><a href="#">Writing a High-Impact Statement of Purpose for University Admission</a></h3>
+              <p class="blog-card-excerpt">Key structures and common mistakes to avoid when drafting academic personal statements for global universities.</p>
+              <div class="blog-card-footer">
+                <span class="blog-author"><i class="fa-regular fa-user"></i> Admissions Desk</span>
+                <a href="#" class="blog-link">Read <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 3 -->
+          <article class="blog-card" data-category="visa-updates">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="Passport Stamp">
+            </div>
+            <div class="blog-card-body">
+              <span class="category-tag visa"><i class="fa-solid fa-passport"></i> Visa Updates</span>
+              <h3 class="blog-card-title"><a href="#">Understanding Bank Statement Verification for Student Visa Applicants</a></h3>
+              <p class="blog-card-excerpt">Learn how embassies audit proof of financial support, seasoning periods, and accepted liquid asset types.</p>
+              <div class="blog-card-footer">
+                <span class="blog-author"><i class="fa-regular fa-user"></i> Visa Advisory</span>
+                <a href="#" class="blog-link">Read <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 4 -->
+          <article class="blog-card" data-category="industry-updates">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Airplane Wing">
+            </div>
+            <div class="blog-card-body">
+              <span class="category-tag visa"><i class="fa-solid fa-chart-line"></i> Industry Updates</span>
+              <h3 class="blog-card-title"><a href="#">Global Airline Routes and Aviation Forecast for Autumn Season</a></h3>
+              <p class="blog-card-excerpt">An overview of added frequencies, carrier partnerships, and international transit hub expansions.</p>
+              <div class="blog-card-footer">
+                <span class="blog-author"><i class="fa-regular fa-user"></i> Ticketing Desk</span>
+                <a href="#" class="blog-link">Read <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 9. SIDEBAR -->
+      <aside class="blog-sidebar">
+
+        <!-- Search Widget -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Search Newsroom</h3>
+          <div class="blog-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="article-search" placeholder="Search visas, scholarships, news...">
           </div>
         </div>
-      </article>
+
+        <!-- Recent News Widget -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Recent Updates</h3>
+          <ul class="recent-posts-list">
+            <li class="recent-post-item">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=150&q=80" class="recent-post-img" alt="Thumbnail">
+              <div class="recent-post-info">
+                <a href="#" class="recent-post-title">2026 Global Student Visa Changes</a>
+                <span class="recent-post-date"><i class="fa-regular fa-calendar"></i> July 28, 2026</span>
+              </div>
+            </li>
+            <li class="recent-post-item">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=150&q=80" class="recent-post-img" alt="Thumbnail">
+              <div class="recent-post-info">
+                <a href="#" class="recent-post-title">SUIGENERIS Abuja Office Launch</a>
+                <span class="recent-post-date"><i class="fa-regular fa-calendar"></i> July 26, 2026</span>
+              </div>
+            </li>
+            <li class="recent-post-item">
+              <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=150&q=80" class="recent-post-img" alt="Thumbnail">
+              <div class="recent-post-info">
+                <a href="#" class="recent-post-title">Canada Proof of Funds Revision</a>
+                <span class="recent-post-date"><i class="fa-regular fa-calendar"></i> July 22, 2026</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Categories List Widget -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">News Categories</h3>
+          <ul class="sidebar-cat-list">
+            <li class="sidebar-cat-item active" data-category="all">
+              <span>All News & Articles</span>
+              <span class="cat-count">14</span>
+            </li>
+            <li class="sidebar-cat-item" data-category="travel-news">
+              <span>Travel News</span>
+              <span class="cat-count">3</span>
+            </li>
+            <li class="sidebar-cat-item" data-category="visa-updates">
+              <span>Visa Updates</span>
+              <span class="cat-count">4</span>
+            </li>
+            <li class="sidebar-cat-item" data-category="scholarships">
+              <span>Scholarships</span>
+              <span class="cat-count">3</span>
+            </li>
+            <li class="sidebar-cat-item" data-category="study-abroad">
+              <span>Study Abroad</span>
+              <span class="cat-count">2</span>
+            </li>
+            <li class="sidebar-cat-item" data-category="company-news">
+              <span>Company News</span>
+              <span class="cat-count">2</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Featured Destination Widget -->
+        <div class="featured-dest-widget">
+          <span class="announcement-badge" style="background: rgba(255,107,0,0.3); border:none; margin-bottom: 0.5rem;">Intake Spotlight</span>
+          <h4>Canada & UK 2027 Admissions</h4>
+          <p>Begin your university processing early to secure guaranteed scholarship consideration and priority visa slots.</p>
+          <a href="study-abroad.html" class="btn btn-primary" style="width: 100%; font-size: 0.85rem;">Apply Today</a>
+        </div>
+
+      </aside>
 
     </div>
 
-    <!-- Pagination -->
-    <nav class="pagination-container" aria-label="Blog Pagination">
-      <button class="page-link" aria-label="Previous Page"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="page-link active" aria-current="page">1</button>
-      <button class="page-link">2</button>
-      <button class="page-link">3</button>
-      <button class="page-link" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></button>
-    </nav>
+    <!-- 10. NEWSLETTER SECTION -->
+    <section class="news-newsletter-banner">
+      <div class="newsletter-content-box">
+        <i class="fa-regular fa-envelope-open" style="font-size: 2.5rem; color: var(--accent-orange); margin-bottom: 1rem;"></i>
+        <h2>Subscribe to Priority Travel Alerts</h2>
+        <p>Get immediate email notifications on breaking visa policy shifts, university intake deadlines, fully-funded scholarship drops, and discounted flight fares.</p>
+        <form class="newsletter-form-inline" onsubmit="event.preventDefault(); alert('Thank you for subscribing to SUIGENERIS Travel Alerts!');">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe Free</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 11. FINAL TRI-ACTION CALLOUT HUB -->
+    <section class="action-hub-section">
+      <div class="news-section-header" style="text-align: center; justify-content: center;">
+        <h2 class="news-section-title"><i class="fa-solid fa-paper-plane"></i> How Can We Assist You Today?</h2>
+      </div>
+      <div class="action-hub-grid">
+        <!-- Action 1 -->
+        <div class="action-hub-card">
+          <div class="action-hub-icon">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h3>Book Flights</h3>
+          <p>Access competitive fare rates on major global airlines for international travel, student tickets, and group bookings.</p>
+          <a href="flights.html" class="btn btn-primary" style="width: 100%;">Reserve Seat</a>
+        </div>
+        <!-- Action 2 -->
+        <div class="action-hub-card">
+          <div class="action-hub-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <h3>Apply for Study Abroad</h3>
+          <p>Get paired with an expert educational consultant for university selection, offer processing, and visa guidance.</p>
+          <a href="study-abroad.html" class="btn btn-primary" style="width: 100%;">Start Application</a>
+        </div>
+        <!-- Action 3 -->
+        <div class="action-hub-card">
+          <div class="action-hub-icon">
+            <i class="fa-solid fa-passport"></i>
+          </div>
+          <h3>Request Visa Assistance</h3>
+          <p>Receive comprehensive document reviews and advisory services for visitor, work, and student immigration visas.</p>
+          <a href="contact.html" class="btn btn-primary" style="width: 100%;">Consult Specialist</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- Newsletter Section -->
-  <section class="newsletter-banner">
-    <div class="container text-center max-width-wrapper">
-      <h2>Get Fresh Travel Tips in Your Inbox</h2>
-      <p>Subscribe to our weekly newsletter for exclusive airfare deals, visa updates, and study abroad guides.</p>
-      
-      <form class="newsletter-form-v2" onsubmit="event.preventDefault();">
-        <input type="email" class="form-control" placeholder="Enter your email address..." required>
-        <button type="submit" class="btn-orange-filled">
-          Subscribe
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
@@ -255,16 +471,16 @@
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="study-abroad.html">Study Abroad</a>
-            <a href="blog.html">Travel Blog</a>
+            <a href="blog.html">News & Blog</a>
             <a href="contact.html">Contact Us</a>
           </div>
         </div>
         <div class="footer-column">
           <h4>Contact Information</h4>
-          <div class="footer-contact-details">
-            <p><i class="fa-solid fa-location-dot"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja.</p>
-            <p><i class="fa-solid fa-phone"></i> 08171421897, 07060907368, 08053521324</p>
-            <p><i class="fa-solid fa-envelope"></i> info@suigeneristravel.com</p>
+          <div class="footer-links" style="color: var(--text-light);">
+            <p><i class="fa-solid fa-location-dot" style="color: var(--accent-orange); margin-right: 0.5rem;"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja.</p>
+            <p><i class="fa-solid fa-phone" style="color: var(--accent-orange); margin-right: 0.5rem;"></i> 08171421897, 07060907368</p>
+            <p><i class="fa-solid fa-envelope" style="color: var(--accent-orange); margin-right: 0.5rem;"></i> info@suigeneristravel.com</p>
           </div>
         </div>
       </div>
@@ -275,30 +491,65 @@
     </div>
   </footer>
 
-  <!-- Floating Social CTAs -->
-  <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-  <a href="https://www.instagram.com/sui_travels?igsh=MWgxMTZqNWZra2gwbQ==" class="instagram-float" target="_blank" aria-label="Instagram Us">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a href="https://www.facebook.com/share/1J1h7joEc8/" class="facebook-float" target="_blank" aria-label="Facebook Us">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
-
-  <!-- Mobile Menu Script -->
+  <!-- Page Interactivity Scripts -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+     document.addEventListener('DOMContentLoaded', () => {
+      // Hamburger Menu Logic
       const hamburgerBtn = document.getElementById('hamburger-toggle');
       const navMenu = document.getElementById('nav-menu');
-      if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', () => {
-          navMenu.classList.toggle('open');
-          const icon = hamburgerBtn.querySelector('i');
-          if (icon) {
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-          }
+      
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        const icon = hamburgerBtn.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+          icon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+          icon.classList.replace('fa-xmark', 'fa-bars');
+        }
+      });
+
+      // 2. Dynamic Filtering Logic
+      const catPills = document.querySelectorAll('.cat-pill');
+      const sidebarCatItems = document.querySelectorAll('.sidebar-cat-item');
+      const blogCards = document.querySelectorAll('.blog-card');
+      const searchInput = document.getElementById('article-search');
+
+      let currentCategory = 'all';
+      let currentSearch = '';
+
+      function filterContent() {
+        blogCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          const cardTitle = card.querySelector('.blog-card-title').textContent.toLowerCase();
+          const cardExcerpt = card.querySelector('.blog-card-excerpt').textContent.toLowerCase();
+
+          const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+          const matchesSearch = (cardTitle.includes(currentSearch) || cardExcerpt.includes(currentSearch));
+
+          card.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
+        });
+      }
+
+      // Sync category pills & sidebar selection
+      function setCategory(category) {
+        currentCategory = category;
+        catPills.forEach(p => p.classList.toggle('active', p.getAttribute('data-category') === category));
+        sidebarCatItems.forEach(i => i.classList.toggle('active', i.getAttribute('data-category') === category));
+        filterContent();
+      }
+
+      catPills.forEach(pill => {
+        pill.addEventListener('click', () => setCategory(pill.getAttribute('data-category')));
+      });
+
+      sidebarCatItems.forEach(item => {
+        item.addEventListener('click', () => setCategory(item.getAttribute('data-category')));
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value.toLowerCase().trim();
+          filterContent();
         });
       }
     });
