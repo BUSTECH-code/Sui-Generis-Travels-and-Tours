@@ -4,88 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services | SUI-GENERIS TRAVELS AND TOURS LTD</title>
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Top Info Bar 
-  <div class="top-bar">
-    <div class="container top-bar-wrapper">
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-location-dot"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja</span>
-        <span><i class="fa-solid fa-envelope"></i> info@suigeneristravel.com</span>
-      </div>
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-phone"></i> 08171421897 | 07060907368</span>
-      </div>
+  <!-- Navigation Header -->
+  <header class="navbar navbar-v2">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="study-abroad.html" class="nav-link">Study Abroad</a>
+        <a href="flights.html" class="nav-link">Flights</a>
+        <a href="services.html" class="nav-link">Tours</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
     </div>
-  </div>
--->
+  </header>
 
-  <!-- Header Navigation -->
- <!-- Unified Header (Use on ALL inner pages) -->
-<header class="navbar navbar-v2">
-  <div class="container nav-container">
-    <a href="index.html" class="brand-logo">
-      <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
-    </a>
-
-    <nav class="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services </a>
-      <a href="study-abroad.html" class="nav-link">Study Abroad </a>
-      <a href="flights.html" class="nav-link">Flights</a>
-      <a href="services.html" class="nav-link active">Tours</a>
-      <a href="gallery.html" class="nav-link">Gallery</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
-
-  </div>
-</header>
-
-  <!-- Hero Banner -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Comprehensive Travel Services</h1>
-      <p>Tailored ticketing, educational placements, visas, and tour packages.</p>
+  <!-- Page Inner Hero (Reusing existing layout structure) -->
+  <section class="page-hero-v2">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-inner-container">
+      <span class="hero-script-tag">What We Offer</span>
+      <h1 class="page-title">Comprehensive Travel Services</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Services</span>
+      </div>
     </div>
   </section>
 
-  <!-- Dynamic Services Grid -->
-  <section class="section-padding">
-    <div class="container">
-      <div class="grid-3" id="aligned-services-grid"></div>
-    </div>
-  </section>
-
-  <!-- Process Steps -->
+  <!-- Dynamic Services Grid Section -->
   <section class="section-padding bg-surface">
     <div class="container">
       <div class="section-header text-center">
-        <h2>How We Work</h2>
-        <p>Simple 3-step process to get you where you want to go.</p>
+        <span class="sub-header-tag">TAILORED SOLUTIONS</span>
+        <h2 class="main-header-title">Designed For Your Travel Needs</h2>
+        <div class="header-line"></div>
       </div>
 
-      <div class="grid-3">
-        <div class="card feature-box text-center">
-          <div class="step-number">1</div>
+      <div class="services-grid-v2" id="aligned-services-grid"></div>
+    </div>
+  </section>
+
+  <!-- How We Work / Process Steps -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-header-tag">SIMPLE PROCESS</span>
+        <h2 class="main-header-title">How We Work</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="process-steps-grid">
+        <div class="process-card">
+          <div class="step-badge">01</div>
+          <div class="process-icon"><i class="fa-solid fa-comments"></i></div>
           <h3>Consultation</h3>
-          <p>Reach out online or visit our Abuja office. We assess your travel requirements and provide tailored advice.</p>
+          <p>Reach out online or visit our Abuja office. We assess your specific requirements and provide clear, tailored guidance.</p>
         </div>
 
-        <div class="card feature-box text-center">
-          <div class="step-number">2</div>
+        <div class="process-card">
+          <div class="step-badge">02</div>
+          <div class="process-icon"><i class="fa-solid fa-file-contract"></i></div>
           <h3>Processing & Booking</h3>
-          <p>We handle document checks, school applications, flight bookings, and visa submissions with precision.</p>
+          <p>We handle document verification, school admissions, ticket reservations, and visa submissions with precise attention to detail.</p>
         </div>
 
-        <div class="card feature-box text-center">
-          <div class="step-number">3</div>
+        <div class="process-card">
+          <div class="step-badge">03</div>
+          <div class="process-icon"><i class="fa-solid fa-plane-departure"></i></div>
           <h3>Departure & Support</h3>
-          <p>Receive your ticket, visa, or admission letter alongside comprehensive pre-departure orientation.</p>
+          <p>Receive your ticket, visa, or admission offer letter alongside comprehensive pre-departure orientation and onboarding assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action (Reusing existing CTA block) -->
+  <section class="cta-banner-v2">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h2>Need a Custom Travel Package?</h2>
+          <p>Connect with our expert travel agents to design a personalized itinerary for your budget.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn-orange-filled">Request Custom Plan <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -93,37 +117,12 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h3>SUI-GENERIS TRAVELS</h3>
-          <p>SUIGENERIS TRAVELS AND TOURS LTD is a trusted travel agency delivering world-class air ticketing, study abroad placements, visa advisory, and corporate travel solutions.</p>
-        </div>
-        <div class="footer-column">
-          <h4>Quick Links</h4>
-          <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="study-abroad.html">Study Abroad</a>
-            <a href="contact.html">Contact Us</a>
-          </div>
-        </div>
-        <div class="footer-column">
-          <h4>Newsletter</h4>
-          <p class="footer-text">Subscribe for flight deals and study abroad scholarship updates.</p>
-          <form data-supabase-form="newsletter" class="newsletter-form">
-            <input type="email" name="email" placeholder="Your Email" required class="form-control">
-            <button type="submit" class="btn-book-now"><i class="fa-solid fa-paper-plane"></i></button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 SUIGENERIS TRAVELS AND TOURS LTD. All rights reserved.</p>
-      </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SUIGENERIS TRAVELS AND TOURS LTD. All rights reserved.</p>
     </div>
   </footer>
 
- <!-- Floating WhatsApp CTA -->
+  <!-- Floating Social Links -->
   <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
@@ -134,31 +133,51 @@
     <i class="fa-brands fa-facebook"></i>
   </a>
 
-  <script type="module" src="js/app.js"></script>
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburgerBtn = document.getElementById('hamburger-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+          navMenu.classList.toggle('open');
+          const icon = hamburgerBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Dynamic Service Renderer -->
   <script type="module">
     const serviceList = [
-      { title: "Air Ticket Booking", icon: "fa-plane", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80", desc: "Domestic and international airline tickets across all major global carriers at competitive rates.", link: "flights.html" },
-      { title: "Study Abroad Consultancy", icon: "fa-graduation-cap", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80", desc: "University placements in 45+ countries including UK, Canada, USA, Europe, China, and Brazil.", link: "study-abroad.html" },
-      { title: "Visa Processing Advisory", icon: "fa-passport", img: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80", desc: "Expert guidance for student, tourist, business, and immigration visas.", link: "visa.html" },
-      { title: "Hotel Reservations", icon: "fa-hotel", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80", desc: "Discounted rates for luxury, business, and budget hotel stays worldwide.", link: "contact.html" },
-      { title: "Custom Holiday Packages", icon: "fa-umbrella-beach", img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", desc: "Handcrafted vacation itineraries for individuals, couples, and corporate groups.", link: "contact.html" },
-      { title: "Umrah & Hajj Services", icon: "fa-kaaba", img: "https://images.unsplash.com/photo-1565552070098-fd83a8dac718?auto=format&fit=crop&w=600&q=80", desc: "Seamless holy pilgrimage travel arrangements with accommodation and guidance.", link: "contact.html" }
+      { title: "Air Ticket Booking", icon: "fa-plane-up", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80", desc: "Domestic and international airline tickets across major global carriers at competitive rates.", link: "flights.html" },
+      { title: "Study Abroad Consultancy", icon: "fa-graduation-cap", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80", desc: "University placements and scholarship assistance across UK, Canada, USA, Europe, and beyond.", link: "study-abroad.html" },
+      { title: "Visa Processing Advisory", icon: "fa-passport", img: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80", desc: "Professional advisory for student, tourist, business, and permanent residency visa filings.", link: "visa.html" },
+      { title: "Hotel Reservations", icon: "fa-hotel", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80", desc: "Discounted rates for luxury, corporate, and budget hotel stays across world destinations.", link: "contact.html" },
+      { title: "Custom Holiday Packages", icon: "fa-umbrella-beach", img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", desc: "Tailored vacation packages for individual travelers, couples, families, and corporate retreats.", link: "contact.html" },
+      { title: "Umrah & Hajj Pilgrimages", icon: "fa-kaaba", img: "https://images.unsplash.com/photo-1565552070098-fd83a8dac718?auto=format&fit=crop&w=600&q=80", desc: "Seamless holy pilgrimage travel planning with accommodation and on-ground logistics support.", link: "contact.html" }
     ];
 
     const container = document.getElementById('aligned-services-grid');
-    container.innerHTML = serviceList.map(s => `
-      <div class="card service-card">
-        <div class="card-img-wrapper">
-          <img src="${s.img}" alt="${s.title}">
-          <div class="icon-badge"><i class="fa-solid ${s.icon}"></i></div>
+    if (container) {
+      container.innerHTML = serviceList.map(s => `
+        <div class="s-card">
+          <div class="s-card-img">
+            <img src="${s.img}" alt="${s.title}" loading="lazy">
+            <div class="s-card-icon"><i class="fa-solid ${s.icon}"></i></div>
+          </div>
+          <div class="s-card-body">
+            <h3>${s.title}</h3>
+            <p>${s.desc}</p>
+            <a href="${s.link}" class="s-card-link">Explore Service <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
         </div>
-        <div class="card-body">
-          <h3 class="card-title">${s.title}</h3>
-          <p class="card-text">${s.desc}</p>
-          <a href="${s.link}" class="btn-outline">Inquire Service</a>
-        </div>
-      </div>
-    `).join('');
+      `).join('');
+    }
   </script>
 </body>
 </html>

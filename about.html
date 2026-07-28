@@ -5,83 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | SUI-GENERIS TRAVELS AND TOURS LTD</title>
 
-   <!-- Fonts & Icons -->
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-  <!-- Top Info Bar 
-  <div class="top-bar">
-    <div class="container top-bar-wrapper">
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-location-dot"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja</span>
-        <span><i class="fa-solid fa-envelope"></i> info@suigeneristravel.com</span>
-      </div>
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-phone"></i> 08171421897 | 07060907368</span>
-      </div>
-    </div>
-  </div>
--->
-  
+
   <!-- Navigation Header -->
-  <!-- Unified Header (Use on ALL inner pages) -->
-<header class="navbar navbar-v2">
-  <div class="container nav-container">
-    <a href="index.html" class="brand-logo">
-      <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
-    </a>
+  <header class="navbar navbar-v2">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
+      </a>
 
-    <nav class="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link active">About Us</a>
-      <a href="services.html" class="nav-link">Services </a>
-      <a href="study-abroad.html" class="nav-link">Study Abroad </a>
-      <a href="flights.html" class="nav-link">Flights</a>
-      <a href="services.html" class="nav-link">Tours</a>
-      <a href="gallery.html" class="nav-link">Gallery</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
+      <!-- Mobile Hamburger Toggle -->
+      <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-  </div>
-</header>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="study-abroad.html" class="nav-link">Study Abroad</a>
+        <a href="flights.html" class="nav-link">Flights</a>
+        <a href="services.html" class="nav-link">Tours</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Hero Banner -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>About SUIGENERIS TRAVELS</h1>
-      <p>Redefining seamless travel, study abroad, and visa advisory with distinction.</p>
+  <!-- Page Inner Hero -->
+  <section class="page-hero-v2">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-inner-container">
+      <span class="hero-script-tag">Who We Are</span>
+      <h1 class="page-title">In a Class of Our Own</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>About Us</span>
+      </div>
     </div>
   </section>
 
-  <!-- Main Content Section -->
-  <section class="section-padding">
+  <!-- Main About Content Section -->
+  <section class="section-padding bg-surface">
     <div class="container">
-      <div class="grid-2">
-        <div class="about-content">
-          <h2>Class of Our Own in Travel Consultancy</h2>
-          <p>
-            <strong>SUIGENERIS TRAVELS AND TOURS LTD</strong> (RC: 1824792) is a premier travel management agency based in Abuja, Nigeria. Derived from the Latin term meaning <em>"unique, in a class of its own,"</em> we deliver custom travel solutions for corporate executives, vacationers, and students.
-          </p>
-          <p>
-            Our team simplifies visa processes, secures competitive airfares across major international airlines, and assists students with institutional admissions globally.
-          </p>
+      <div class="about-grid">
+        <div class="about-image-stack">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Sui-Generis Team" class="img-primary">
+          <div class="experience-badge">
+            <span class="exp-number">10+</span>
+            <span class="exp-text">Years of Excellence</span>
+          </div>
         </div>
 
-        <div class="card card-feature">
-          <h3><i class="fa-solid fa-award icon-accent"></i> Why Choose Us</h3>
-          <ul class="feature-list">
-            <li><i class="fa-solid fa-check icon-accent"></i> Transparent pricing with no hidden charges</li>
-            <li><i class="fa-solid fa-check icon-accent"></i> High visa approval track record</li>
-            <li><i class="fa-solid fa-check icon-accent"></i> Dedicated personal travel advisor</li>
-          </ul>
+        <div class="about-story">
+          <span class="sub-header-tag">OUR STORY</span>
+          <h2 class="main-header-title text-left">Redefining Seamless Travel & Global Opportunities</h2>
+          <p class="about-lead">
+            <strong>SUIGENERIS TRAVELS AND TOURS LTD</strong> (RC: 1824792) is a premier travel management agency headquartered in Abuja, Nigeria. 
+          </p>
+          <p class="about-body">
+            Derived from the Latin term meaning <em>"unique, in a class of its own,"</em> we deliver tailored travel solutions, immigration advisories, and study abroad facilitation for corporate executives, holidaymakers, and ambitious students worldwide.
+          </p>
+
+          <div class="about-stats-grid">
+            <div class="stat-card">
+              <h3>98%</h3>
+              <p>Visa Success Rate</p>
+            </div>
+            <div class="stat-card">
+              <h3>45+</h3>
+              <p>Global Destinations</p>
+            </div>
+            <div class="stat-card">
+              <h3>1200+</h3>
+              <p>Partner Institutions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars / Mission & Vision -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-header-tag">WHAT DRIVES US</span>
+        <h2 class="main-header-title">Our Core Pillars</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>To eliminate travel and educational barriers by delivering transparent, efficient, and personalized consultancy services for every client.</p>
+        </div>
+
+        <div class="pillar-card highlight-card">
+          <div class="pillar-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>To be the premier travel management partner across Africa, setting unmatched benchmarks for integrity, innovation, and customer satisfaction.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Core Values</h3>
+          <p>Integrity, Client-Centricity, Transparency, and Excellence in every journey, itinerary, and application we manage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Grid -->
+  <section class="section-padding bg-surface">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-header-tag">THE SUI-GENERIS ADVANTAGE</span>
+        <h2 class="main-header-title">Why Travel With Us?</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="features-grid-v2">
+        <div class="feature-box">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <div class="feature-info">
+            <h4>Transparent Pricing</h4>
+            <p>Clear, upfront cost structures with absolutely no hidden fees or surprise charges along the way.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-passport"></i></div>
+          <div class="feature-info">
+            <h4>High Visa Approval Track Record</h4>
+            <p>Expert review and documentation structuring to maximize your visa approval probabilities.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-user-shield"></i></div>
+          <div class="feature-info">
+            <h4>Dedicated Personal Advisors</h4>
+            <p>Direct 1-on-1 support from certified travel consultants assigned specifically to your case file.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <div class="feature-info">
+            <h4>End-to-End Support</h4>
+            <p>From initial application and ticketing to arrival and accommodation onboarding.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section class="cta-banner-v2">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h2>Ready to Begin Your Next Adventure?</h2>
+          <p>Speak with our senior travel experts today and let’s structure your trip or study plan flawlessly.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn-orange-filled">Get Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -94,7 +192,7 @@
     </div>
   </footer>
 
-   <!-- Floating WhatsApp CTA -->
+  <!-- Floating Social Widgets -->
   <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
@@ -105,6 +203,22 @@
     <i class="fa-brands fa-facebook"></i>
   </a>
 
-  <script type="module" src="js/app.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburgerBtn = document.getElementById('hamburger-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        const icon = hamburgerBtn.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+          icon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+          icon.classList.replace('fa-xmark', 'fa-bars');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

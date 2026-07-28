@@ -4,126 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flight Booking | SUI-GENERIS TRAVELS AND TOURS LTD</title>
-
-   <!-- Fonts & Icons -->
+  
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Top Info Bar 
-  <div class="top-bar">
-    <div class="container top-bar-wrapper">
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-location-dot"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja</span>
-        <span><i class="fa-solid fa-envelope"></i> info@suigeneristravel.com</span>
-      </div>
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-phone"></i> 08171421897 | 07060907368</span>
-      </div>
-    </div>
-  </div>
--->
-
   <!-- Navigation Header -->
- <!-- Unified Header (Use on ALL inner pages) -->
-<header class="navbar navbar-v2">
-  <div class="container nav-container">
-    <a href="index.html" class="brand-logo">
-      <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
-    </a>
+  <header class="navbar navbar-v2">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
+      </a>
 
-    <nav class="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services </a>
-      <a href="study-abroad.html" class="nav-link">Study Abroad </a>
-      <a href="flights.html" class="nav-link active">Flights</a>
-      <a href="services.html" class="nav-link">Tours</a>
-      <a href="gallery.html" class="nav-link">Gallery</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
+      <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-  </div>
-</header>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="study-abroad.html" class="nav-link">Study Abroad</a>
+        <a href="flights.html" class="nav-link active">Flights</a>
+        <a href="services.html" class="nav-link">Tours</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Hero Banner -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Book International & Domestic Flights</h1>
-      <p>Instant quotes and ticket reservations on major worldwide airlines.</p>
+  <!-- Reused Hero Section Structure -->
+  <section class="page-hero-v2">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-inner-container">
+      <span class="hero-script-tag">Worldwide Air Ticketing</span>
+      <h1 class="page-title">Book International & Domestic Flights</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Flights</span>
+      </div>
     </div>
   </section>
 
-  <!-- Main Section -->
-  <section class="section-padding">
+  <!-- Main Booking Form & Routes Grid -->
+  <section class="section-padding bg-surface">
     <div class="container">
-      <div class="contact-intro">
-        <nav class="booking-form-breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <a href="flights.html">Flights</a>
-        </nav>
-
-        <div class="contact-hero-copy">
-          <h2 class="section-title">Complete Your Booking Request</h2>
-          <p>Fill out the secure booking form below. A member of our travel team will contact you shortly.</p>
+      <div class="study-grid">
+        
+        <!-- Booking Form Container (Reusing form-wrapper-card & iframe-container) -->
+        <div class="form-wrapper-card">
+          <div class="form-card-header">
+            <h3>Flight Booking Request Form</h3>
+            <p>Share your preferred route, travel dates, cabin class, and passenger details for a fast quote.</p>
+          </div>
+          <div class="iframe-container">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSc3ZkWa82rMoAllH12QQ-Ywx0E6Nbmyv6nsHPNVsC1OzkrmCA/viewform?embedded=true"
+              title="SUI-GENERIS Flight Booking Request Form"
+              loading="lazy">
+              Loading form…
+            </iframe>
+          </div>
         </div>
 
-        <div class="booking-form-cta">
-          <span class="booking-form-pill">Fast quotes for domestic &amp; international travel</span>
-          <a href="tel:+2348171421897" class="btn-book-now">Call the team</a>
-        </div>
+        <!-- Sidebar / Routes & Features -->
+        <div class="flight-sidebar">
+          <div class="sidebar-header">
+            <span class="sub-header-tag">POPULAR ROUTES</span>
+            <h2 class="main-header-title text-left">Partner Airlines & Connections</h2>
+            <p class="about-body">We partner with leading global and local carriers to secure optimal routes, schedules, and competitive rates.</p>
+          </div>
 
-        <div class="booking-form-shell">
-          <div class="card booking-form-card">
-            <div class="booking-form-header">
-              <h3>Flight Booking Request Form</h3>
-              <p>Share your preferred route, travel dates, cabin class, and passenger details for a tailored quote.</p>
+          <!-- Airline/Route Cards Grid -->
+          <div class="flight-route-cards">
+            <div class="s-card">
+              <div class="s-card-img">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="International Flight" loading="lazy">
+                <div class="s-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+              </div>
+              <div class="s-card-body">
+                <h3>International Routes</h3>
+                <p>Seamless connections across Europe, UK, USA, Canada, Asia, and the Middle East with top-tier international airlines.</p>
+              </div>
             </div>
-            <div class="booking-form-iframe-wrapper">
-              <iframe
-                class="booking-form-iframe"
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc3ZkWa82rMoAllH12QQ-Ywx0E6Nbmyv6nsHPNVsC1OzkrmCA/viewform?embedded=true"
-                title="SUI-GENERIS Flight Booking Request Form"
-                loading="lazy"
-                allowfullscreen>
-                Loading…
-              </iframe>
+
+            <div class="s-card">
+              <div class="s-card-img">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80" alt="Domestic Flight" loading="lazy">
+                <div class="s-card-icon"><i class="fa-solid fa-plane-arrival"></i></div>
+              </div>
+              <div class="s-card-body">
+                <h3>Domestic Deals</h3>
+                <p>Fast and reliable flight reservations for Abuja, Lagos, Port Harcourt, Kano, and all major domestic airports.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Highlights Box -->
+          <div class="intake-card mt-2">
+            <div class="intake-item">
+              <i class="fa-solid fa-bolt"></i>
+              <div>
+                <h4>Fast Response Time</h4>
+                <p>Our ticketing specialists issue customized quotes and seat availability within minutes.</p>
+              </div>
+            </div>
+            <div class="intake-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div>
+                <h4>Flexible Cancellation & Rebooking</h4>
+                <p>Support with date modifications, ticket reissuances, and airline policy navigation.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div>
-          <h3 class="section-title">Partner Airlines &amp; Routes</h3>
-          <div class="grid-2 gap-small">
-            <div class="card card-compact">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=500&q=80" alt="International Flight">
-              </div>
-              <div class="card-body">
-                <h4>International Routes</h4>
-                <p>Europe, UK, USA, Canada &amp; Asia routes.</p>
-              </div>
-            </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="card card-compact">
-              <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=500&q=80" alt="Domestic Flight">
-              </div>
-              <div class="card-body">
-                <h4>Domestic Deals</h4>
-                <p>Abuja, Lagos, Port Harcourt &amp; state routes.</p>
-              </div>
-            </div>
-          </div>
+  <!-- Reused Call to Action Banner -->
+  <section class="cta-banner-v2">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h2>Need Urgent Ticket Confirmation?</h2>
+          <p>Contact our ticketing desk immediately for real-time seat availability and booking support.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="tel:+2348171421897" class="btn-orange-filled"><i class="fa-solid fa-phone"></i> Call Travel Desk</a>
         </div>
       </div>
     </div>
@@ -136,8 +151,8 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
+  <!-- Floating Social Anchors -->
+  <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20a%20flight%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
   <a href="https://www.instagram.com/sui_travels?igsh=MWgxMTZqNWZra2gwbQ==" class="instagram-float" target="_blank" aria-label="Instagram Us">
@@ -147,6 +162,22 @@
     <i class="fa-brands fa-facebook"></i>
   </a>
 
-  <script type="module" src="js/app.js"></script>
+  <!-- Mobile Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburgerBtn = document.getElementById('hamburger-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+          navMenu.classList.toggle('open');
+          const icon = hamburgerBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

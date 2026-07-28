@@ -4,138 +4,147 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Abroad Consultancy | SUI-GENERIS TRAVELS AND TOURS LTD</title>
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-   <!-- Top Info Bar 
-  <div class="top-bar">
-    <div class="container top-bar-wrapper">
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-location-dot"></i> Suite D19, Melita Plaza, Area 11 Garki, FCT Abuja</span>
-        <span><i class="fa-solid fa-envelope"></i> info@suigeneristravel.com</span>
-      </div>
-      <div class="top-bar-info">
-        <span><i class="fa-solid fa-phone"></i> 08171421897 | 07060907368</span>
-      </div>
+  <!-- Navigation Header -->
+  <header class="navbar navbar-v2">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
+      </a>
+
+      <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="study-abroad.html" class="nav-link active">Study Abroad</a>
+        <a href="flights.html" class="nav-link">Flights</a>
+        <a href="services.html" class="nav-link">Tours</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
     </div>
-  </div>
--->
+  </header>
 
-  <!-- Header Navigation -->
- <!-- Unified Header (Use on ALL inner pages) -->
-<header class="navbar navbar-v2">
-  <div class="container nav-container">
-    <a href="index.html" class="brand-logo">
-      <img src="assets/logos/logo 2.png" alt="SUI-GENERIS TRAVELS">
-    </a>
-
-    <nav class="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services </a>
-      <a href="study-abroad.html" class="nav-link active">Study Abroad </a>
-      <a href="flights.html" class="nav-link">Flights</a>
-      <a href="services.html" class="nav-link">Tours</a>
-      <a href="gallery.html" class="nav-link">Gallery</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
-
-  </div>
-</header>
-
-  <!-- Hero Banner -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Study Abroad Placement & Guidance</h1>
-      <p>Secure global admissions, scholarships, and student visa approvals seamlessly.</p>
-    </div>
-  </section>
-
-  <!-- Overview Stats Banner -->
-  <section class="stats-banner">
-    <div class="container grid-4 text-center">
-      <div class="stat-item">
-        <h2>45+</h2>
-        <p>Destinations (USA, UK, Canada, Australia, Europe, Asia)</p>
-      </div>
-      <div class="stat-item">
-        <h2>1,200+</h2>
-        <p>Partner Institutions & Colleges</p>
-      </div>
-      <div class="stat-item">
-        <h2>100,000+</h2>
-        <p>Course Options</p>
-      </div>
-      <div class="stat-item">
-        <h2>From €3,000</h2>
-        <p>Affordable Tuition Options</p>
+  <!-- Reused Hero Layout -->
+  <section class="page-hero-v2">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-inner-container">
+      <span class="hero-script-tag">Global Admissions</span>
+      <h1 class="page-title">Study Abroad Placement & Guidance</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Study Abroad</span>
       </div>
     </div>
   </section>
 
-  <!-- Checklist & Application Form -->
-  <section class="section-padding">
+  <!-- Key Metrics Row (Reusing stat-card classes) -->
+  <section class="section-padding bg-surface">
     <div class="container">
-      <div class="contact-intro">
-        <nav class="booking-form-breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <a href="study-abroad.html">Study Abroad</a>
-        </nav>
-
-        <div class="contact-hero-copy">
-          <h2 class="section-title">Complete Your Study Abroad Application</h2>
-          <p>Fill out the secure application form below. A member of our study-abroad team will contact you shortly.</p>
+      <div class="about-stats-grid study-stats">
+        <div class="stat-card">
+          <h3>45+</h3>
+          <p>Global Destinations</p>
         </div>
-
-        <div class="booking-form-cta">
-          <span class="booking-form-pill">Admissions guidance, scholarships & visa support</span>
-          <a href="tel:+2348171421897" class="btn-book-now">Call the team</a>
+        <div class="stat-card">
+          <h3>1,200+</h3>
+          <p>Partner Institutions</p>
         </div>
-
-        <div class="booking-form-shell">
-          <div class="card booking-form-card">
-            <div class="booking-form-header">
-              <h3>Study Abroad Application Form</h3>
-              <p>Share your destination, preferred program, and academic background so we can guide your next steps.</p>
-            </div>
-            <div class="booking-form-iframe-wrapper">
-              <iframe
-                class="booking-form-iframe"
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfUPvki5gGnIVGJIiUB-AU8e_rRq_qP6L60irZBe17iOQVbTA/viewform?embedded=true"
-                title="SUI-GENERIS Study Abroad Application Form"
-                loading="lazy"
-                allowfullscreen>
-                Loading…
-              </iframe>
-            </div>
-          </div>
+        <div class="stat-card">
+          <h3>100k+</h3>
+          <p>Course Options</p>
+        </div>
+        <div class="stat-card">
+          <h3>€3,000+</h3>
+          <p>Affordable Tuition</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="grid-2 gap-large align-start mt-1">
-        <div>
-          <h2 class="section-title">Entry Requirements Checklist</h2>
-          <ul class="checklist-items">
-            <li><i class="fa-solid fa-circle-check icon-success"></i> Valid International Passport</li>
-            <li><i class="fa-solid fa-circle-check icon-success"></i> Academic Certificates (WAEC/NECO/Degree)</li>
-            <li><i class="fa-solid fa-circle-check icon-success"></i> Official Academic Transcripts</li>
-            <li><i class="fa-solid fa-circle-check icon-success"></i> Curriculum Vitae (CV)</li>
-            <li><i class="fa-solid fa-circle-check icon-success"></i> Personal Statement / SOP</li>
-            <li><i class="fa-solid fa-circle-check icon-success"></i> English Proficiency Test Results (Where applicable)</li>
-            <li><i class="fa-solid fa-circle-check icon-success"></i> Financial Proof / Proof of Funds</li>
-            <li><i class="fa-solid fa-circle-check icon-success"></i> Passport Photograph</li>
+  <!-- Checklist & Application Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="study-grid">
+        
+        <!-- Requirements Checklist -->
+        <div class="requirements-box">
+          <span class="sub-header-tag">PREPARATION</span>
+          <h2 class="main-header-title text-left">Requirements Checklist</h2>
+          <p class="about-body">Ensure you have the following documents ready to streamline your admission and visa application workflow:</p>
+          
+          <ul class="sa-checklist">
+            <li><i class="fa-solid fa-circle-check"></i> <span>Valid International Passport</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Academic Certificates (WAEC / NECO / Degree)</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Official Academic Transcripts</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Curriculum Vitae (CV) / Resume</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Personal Statement / SOP</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>English Test Results (If required)</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Proof of Financial Support / Bank Statement</span></li>
           </ul>
 
-          <div class="card info-box">
-            <h4>Intake Periods</h4>
-            <p>January, June, and September Intakes available.</p>
-            <h4 class="mt-1">Scholarships Available</h4>
-            <p>Special funding packages for European, Brazilian, and Chinese universities.</p>
+          <div class="intake-card">
+            <div class="intake-item">
+              <i class="fa-solid fa-calendar-days"></i>
+              <div>
+                <h4>Available Intakes</h4>
+                <p>January, June, and September Sessions</p>
+              </div>
+            </div>
+            <div class="intake-item">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <h4>Scholarship Opportunities</h4>
+                <p>Special packages for European, Brazilian, and Asian Universities</p>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <!-- Embedded Form Container -->
+        <div class="form-wrapper-card">
+          <div class="form-card-header">
+            <h3>Online Application Form</h3>
+            <p>Fill out your target details below for an evaluation by our educational advisors.</p>
+          </div>
+          <div class="iframe-container">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfUPvki5gGnIVGJIiUB-AU8e_rRq_qP6L60irZBe17iOQVbTA/viewform?embedded=true"
+              title="SUI-GENERIS Study Abroad Application Form"
+              loading="lazy">
+              Loading form…
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Reused CTA Block -->
+  <section class="cta-banner-v2">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h2>Need Guidance With Your Application?</h2>
+          <p>Speak directly with our study abroad advisors to choose the right course and destination.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="tel:+2348171421897" class="btn-orange-filled"><i class="fa-solid fa-phone"></i> Call Advisory Team</a>
         </div>
       </div>
     </div>
@@ -143,37 +152,12 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h3>SUI-GENERIS TRAVELS</h3>
-          <p>SUIGENERIS TRAVELS AND TOURS LTD is a trusted travel agency delivering world-class air ticketing, study abroad placements, visa advisory, and corporate travel solutions.</p>
-        </div>
-        <div class="footer-column">
-          <h4>Quick Links</h4>
-          <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="study-abroad.html">Study Abroad</a>
-            <a href="contact.html">Contact Us</a>
-          </div>
-        </div>
-        <div class="footer-column">
-          <h4>Newsletter</h4>
-          <p class="footer-text">Subscribe for flight deals and study abroad scholarship updates.</p>
-          <form data-supabase-form="newsletter" class="newsletter-form">
-            <input type="email" name="email" placeholder="Your Email" required class="form-control">
-            <button type="submit" class="btn-book-now"><i class="fa-solid fa-paper-plane"></i></button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 SUIGENERIS TRAVELS AND TOURS LTD. All rights reserved.</p>
-      </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SUIGENERIS TRAVELS AND TOURS LTD. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp CTA -->
+  <!-- Social Action Anchors -->
   <a href="https://wa.me/2348171421897?text=Hello%20SUI-GENERIS%20Travels,%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" aria-label="WhatsApp Us">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
@@ -184,6 +168,22 @@
     <i class="fa-brands fa-facebook"></i>
   </a>
 
-  <script type="module" src="js/app.js"></script>
+  <!-- Mobile Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburgerBtn = document.getElementById('hamburger-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+          navMenu.classList.toggle('open');
+          const icon = hamburgerBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
