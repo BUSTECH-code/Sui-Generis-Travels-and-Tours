@@ -70,9 +70,10 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px; /* 1. Set your preferred total navbar height here */
   z-index: 1000;
-  background: rgba(11, 19, 43, 0.6);
-  backdrop-filter: blur(8px);
+  background: rgba(11, 19, 43, 0.7);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -80,20 +81,36 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  max-width: 1280px;
+  height: 100%;       /* 2. Container takes 100% of navbar height */
+  margin: 0 auto;
+  padding: 0 1.5rem;  /* 3. ZERO top/bottom padding allows logo to touch top & bottom */
+overflow: visible;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1010;
 }
 
 .brand-logo img {
-  height: 42px;
+  height: 100%;
   width: auto;
   display: block;
+  object-fit: contain;
+  /* 3. Scales the logo graphic 35% larger than the navbar height */
+  transform: scale(1.35);
+  transform-origin: left center; /* Keeps the left alignment anchored */
+  transition: transform 0.25s ease;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 2rem;
 }
 
 .nav-link {
@@ -101,6 +118,7 @@ html, body {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.925rem;
+  white-space: nowrap;
   transition: color 0.25s ease;
 }
 
@@ -116,7 +134,7 @@ html, body {
   color: var(--white);
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1002; /* Keeps hamburger above mobile menu */
+  z-index: 1002;
 }
 
 /* ==========================================================================
@@ -127,7 +145,7 @@ html, body {
   min-height: 88vh;
   display: flex;
   align-items: center;
-  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../assets/images/hero-bg.webp') center/cover no-repeat;
   padding: 8rem 0 6rem 0;
 }
 
@@ -630,11 +648,6 @@ html, body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* --- Brand Logo --- */
-  .brand-logo img {
-    height: 50px;
-  }
-
   /* --- Hero Heights & Typography Spacing --- */
   .hero-v2 {
     min-height: 75vh;
@@ -754,7 +767,7 @@ html, body {
 .page-hero-v2 {
   position: relative;
   padding: 8rem 0 4rem 0;
-  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../assets/images/hero-bg.webp') center/cover no-repeat;
   text-align: center;
   color: var(--white);
 }
@@ -1411,7 +1424,7 @@ html, body {
 .page-hero {
  position: relative;
   padding: 8rem 0 4rem 0;
-  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../assets/images/hero-bg.webp') center/cover no-repeat;
   text-align: center;
   color: var(--white);
   overflow: hidden;
@@ -2516,4 +2529,217 @@ html, body {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+
+
+
+/* ==========================================
+   MEET OUR LEADERSHIP STYLES
+=========================================== */
+.leadership-section {
+  padding: 5rem 1.5rem;
+  background-color: #0b132b;
+  position: relative;
+}
+
+.leadership-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Header */
+.leadership-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.leadership-badge {
+  display: inline-block;
+  color: var(--accent-orange, #ff6b00);
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid rgba(255, 107, 0, 0.25);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.leadership-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.leadership-subtitle {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* 4-Card Grid */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Profile Card */
+.leadership-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.25rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.leadership-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 107, 0, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35), 
+              0 0 18px rgba(255, 107, 0, 0.08);
+}
+
+/* Circular Photo Ring */
+.leadership-photo-wrapper {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--accent-orange, #ff6b00), rgba(16, 185, 129, 0.6)); /* Orange & Green brand accent */
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.leadership-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  background-color: #1a233a; /* Fallback frame while loading */
+}
+
+/* Card Content */
+.leadership-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.leadership-role {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.leadership-desc {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Statement Container */
+.leadership-statement-box {
+  background: linear-gradient(135deg, rgba(22, 34, 59, 0.8) 0%, rgba(11, 19, 43, 0.95) 100%);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  border-left: 4px solid var(--accent-orange, #ff6b00);
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.leadership-statement-text {
+  color: #f1f5f9;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Centered CTA Button */
+.leadership-cta-wrapper {
+  text-align: center;
+}
+
+.leadership-cta-btn {
+  background: var(--accent-orange, #ff6b00);
+  color: #ffffff;
+  padding: 0.9rem 2.25rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.35);
+}
+
+.leadership-cta-btn:hover {
+  background-color: #e05f00;
+  transform: translateY(-2px);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.45);
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .leadership-card {
+    padding: 1.75rem 1.25rem;
+  }
+  
+  .leadership-statement-box {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+
+.leadership-name {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.leadership-role {
+  color: var(--accent-orange, #ff6b00);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  display: block;
 }
